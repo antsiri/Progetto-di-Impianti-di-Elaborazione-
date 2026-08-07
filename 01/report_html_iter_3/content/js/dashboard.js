@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 88.12095032397409, "KoPercent": 11.879049676025918};
+    var data = {"OkPercent": 89.96960486322189, "KoPercent": 10.030395136778116};
     var dataset = [
         {
             "label" : "FAIL",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.19600431965442763, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.19600431965442763, 500, 1500, "GET Random File"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.15653495440729484, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.15653495440729484, 500, 1500, "GET Random File"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 926, 110, 11.879049676025918, 14341.627429805605, 0, 238484, 5084.0, 27947.9, 40827.49999999995, 198521.06000000023, 2.9697476997283614, 34228.70356436872, 0.3801349966405932], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["GET Random File", 926, 110, 11.879049676025918, 14341.627429805605, 0, 238484, 5084.0, 27947.9, 40827.49999999995, 198521.06000000023, 2.9697476997283614, 34228.70356436872, 0.3801349966405932], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 658, 66, 10.030395136778116, 23599.665653495438, 0, 307406, 9377.5, 48313.8, 116676.49999999955, 246616.89999999903, 1.8068732580011808, 23666.441655804203, 0.23547823016352476], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["GET Random File", 658, 66, 10.030395136778116, 23599.665653495438, 0, 307406, 9377.5, 48313.8, 116676.49999999955, 246616.89999999903, 1.8068732580011808, 23666.441655804203, 0.23547823016352476], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 67, 60.90909090909091, 7.235421166306695], "isController": false}, {"data": ["404/Not Found", 43, 39.09090909090909, 4.643628509719222], "isController": false}]}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 37, 56.06060606060606, 5.623100303951368], "isController": false}, {"data": ["404/Not Found", 29, 43.93939393939394, 4.407294832826747], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 926, 110, "Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 67, "404/Not Found", 43, "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["GET Random File", 926, 110, "Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 67, "404/Not Found", 43, "", "", "", "", "", ""], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 658, 66, "Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 37, "404/Not Found", 29, "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["GET Random File", 658, 66, "Non HTTP response code: org.apache.http.NoHttpResponseException/Non HTTP response message: 192.168.64.3:80 failed to respond", 37, "404/Not Found", 29, "", "", "", "", "", ""], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
