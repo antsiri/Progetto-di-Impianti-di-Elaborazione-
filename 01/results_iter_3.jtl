@@ -1,0 +1,927 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1786048719892,40,GET Random File,404,Not Found,Capacity Test - Thread Group 1-1,text,false,,491,123,1,1,http://192.168.64.3/filepath,40,0,28
+1786048719935,2,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1284,133,1,1,http://192.168.64.3/files/file_1KB.dat,2,0,0
+1786048720042,14,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,102664,135,1,1,http://192.168.64.3/files/file_100KB.dat,4,0,0
+1786048720143,30,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1048842,133,1,1,http://192.168.64.3/files/file_1MB.dat,1,0,0
+1786048720775,158,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,1362187,144,3,3,http://192.168.64.3/files/file_extra_1_1330KB.dat,5,0,2
+1786048720243,897,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,52429068,134,3,3,http://192.168.64.3/files/file_50MB.dat,3,0,0
+1786048721141,129,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,5998858,144,3,3,http://192.168.64.3/files/file_extra_3_5858KB.dat,5,0,0
+1786048721079,250,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,5796106,144,4,4,http://192.168.64.3/files/file_extra_2_5660KB.dat,7,0,0
+1786048721276,271,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,8923403,144,4,4,http://192.168.64.3/files/file_extra_5_8714KB.dat,11,0,5
+1786048721484,81,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,2067722,144,4,4,http://192.168.64.3/files/file_extra_6_2019KB.dat,10,0,0
+1786048721446,247,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,12830987,145,4,4,http://192.168.64.3/files/file_extra_4_12530KB.dat,7,0,0
+1786048721680,136,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,5978378,144,5,5,http://192.168.64.3/files/file_extra_7_5838KB.dat,7,0,0
+1786048721846,42,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,2342154,144,5,5,http://192.168.64.3/files/file_extra_9_2287KB.dat,6,0,0
+1786048720280,1639,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,104857870,135,5,5,http://192.168.64.3/files/file_100MB.dat,4,0,1
+1786048721882,85,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,3247370,144,5,5,http://192.168.64.3/files/file_extra_8_3171KB.dat,5,0,0
+1786048721781,217,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11538700,146,5,5,http://192.168.64.3/files/file_extra_10_11268KB.dat,10,0,3
+1786048721920,123,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,10765579,146,5,5,http://192.168.64.3/files/file_extra_13_10513KB.dat,7,0,0
+1786048722185,48,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,4607242,145,5,5,http://192.168.64.3/files/file_extra_11_4499KB.dat,3,0,0
+1786048722281,9,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,102665,135,6,6,http://192.168.64.3/files/file_100KB.dat,3,0,1
+1786048722284,90,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,8654090,145,6,6,http://192.168.64.3/files/file_extra_15_8451KB.dat,5,0,0
+1786048722430,5,GET Random File,404,Not Found,Capacity Test - Thread Group 1-2,text,false,,490,123,6,6,http://192.168.64.3/filepath,5,0,0
+1786048722349,136,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,10040587,145,6,6,http://192.168.64.3/files/file_extra_12_9805KB.dat,4,0,0
+1786048722381,150,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,11652363,146,6,6,http://192.168.64.3/files/file_extra_14_11379KB.dat,3,0,0
+1786048722681,3,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,1284,133,6,6,http://192.168.64.3/files/file_1KB.dat,2,0,0
+1786048722776,104,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,12830988,145,7,7,http://192.168.64.3/files/file_extra_4_12530KB.dat,3,0,1
+1786048722889,74,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,1048842,133,7,7,http://192.168.64.3/files/file_1MB.dat,3,0,0
+1786048722946,36,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1362186,144,7,7,http://192.168.64.3/files/file_extra_1_1330KB.dat,5,0,0
+1786048722981,154,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,5796106,144,7,7,http://192.168.64.3/files/file_extra_2_5660KB.dat,5,0,0
+1786048723282,234,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,5998858,144,8,8,http://192.168.64.3/files/file_extra_3_5858KB.dat,9,0,0
+1786048723275,255,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,2342155,144,8,8,http://192.168.64.3/files/file_extra_9_2287KB.dat,15,0,8
+1786048723485,318,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,8923402,144,9,9,http://192.168.64.3/files/file_extra_5_8714KB.dat,11,0,0
+1786048723682,193,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,3247370,144,9,9,http://192.168.64.3/files/file_extra_8_3171KB.dat,19,0,0
+1786048723585,331,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,2067722,144,9,9,http://192.168.64.3/files/file_extra_6_2019KB.dat,11,0,0
+1786048723648,284,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,5978378,144,9,9,http://192.168.64.3/files/file_extra_7_5838KB.dat,18,0,0
+1786048722889,1127,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,52429068,134,9,9,http://192.168.64.3/files/file_50MB.dat,3,0,0
+1786048724017,7,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,1284,133,9,9,http://192.168.64.3/files/file_1KB.dat,7,0,0
+1786048723778,402,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,10040588,145,9,9,http://192.168.64.3/files/file_extra_12_9805KB.dat,34,0,17
+1786048724081,492,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,4607242,145,10,10,http://192.168.64.3/files/file_extra_11_4499KB.dat,8,0,0
+1786048724546,32,GET Random File,404,Not Found,Capacity Test - Thread Group 1-1,text,false,,490,123,10,10,http://192.168.64.3/filepath,32,0,0
+1786048724083,612,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,11538699,146,10,10,http://192.168.64.3/files/file_extra_10_11268KB.dat,7,0,0
+1786048724683,75,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,1048842,133,10,10,http://192.168.64.3/files/file_1MB.dat,9,0,0
+1786048724386,611,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,10765579,146,11,11,http://192.168.64.3/files/file_extra_13_10513KB.dat,29,0,0
+1786048724925,131,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,102664,135,11,11,http://192.168.64.3/files/file_100KB.dat,117,0,0
+1786048724580,479,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,11652363,146,11,11,http://192.168.64.3/files/file_extra_14_11379KB.dat,15,0,0
+1786048724487,722,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,8654090,145,11,11,http://192.168.64.3/files/file_extra_15_8451KB.dat,22,0,0
+1786048725077,208,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,5796106,144,12,12,http://192.168.64.3/files/file_extra_2_5660KB.dat,8,0,0
+1786048725275,263,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,2342155,144,12,12,http://192.168.64.3/files/file_extra_9_2287KB.dat,17,0,8
+1786048725547,107,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1362186,144,12,12,http://192.168.64.3/files/file_extra_1_1330KB.dat,14,0,0
+1786048725585,250,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,3247370,144,13,13,http://192.168.64.3/files/file_extra_8_3171KB.dat,8,0,0
+1786048725482,415,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,8923402,144,13,13,http://192.168.64.3/files/file_extra_5_8714KB.dat,11,0,0
+1786048725674,345,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,5978378,144,13,13,http://192.168.64.3/files/file_extra_7_5838KB.dat,19,0,0
+1786048726025,171,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,2067722,144,13,13,http://192.168.64.3/files/file_extra_6_2019KB.dat,15,0,0
+1786048725684,539,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,5998858,144,13,13,http://192.168.64.3/files/file_extra_3_5858KB.dat,34,0,0
+1786048723030,3271,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,104857869,135,14,14,http://192.168.64.3/files/file_100MB.dat,5,0,0
+1786048726275,171,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,1048843,133,14,14,http://192.168.64.3/files/file_1MB.dat,19,0,9
+1786048724775,1751,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,12830988,145,14,14,http://192.168.64.3/files/file_extra_4_12530KB.dat,25,0,11
+1786048726527,151,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,1362186,144,14,14,http://192.168.64.3/files/file_extra_1_1330KB.dat,18,0,0
+1786048726284,501,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,11538699,146,15,15,http://192.168.64.3/files/file_extra_10_11268KB.dat,9,0,0
+1786048726980,23,GET Random File,404,Not Found,Capacity Test - Thread Group 1-3,text,false,,490,123,15,15,http://192.168.64.3/filepath,23,0,0
+1786048726987,63,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,102664,135,15,15,http://192.168.64.3/files/file_100KB.dat,26,0,0
+1786048726780,495,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,8654090,145,16,16,http://192.168.64.3/files/file_extra_15_8451KB.dat,18,0,0
+1786048726746,562,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,10040587,145,16,16,http://192.168.64.3/files/file_extra_12_9805KB.dat,21,0,0
+1786048727322,18,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,1284,133,16,16,http://192.168.64.3/files/file_1KB.dat,18,0,0
+1786048726479,1003,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,4607242,145,16,16,http://192.168.64.3/files/file_extra_11_4499KB.dat,23,0,0
+1786048726881,1046,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,11652363,146,17,17,http://192.168.64.3/files/file_extra_14_11379KB.dat,23,0,0
+1786048725769,2746,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,10765580,146,18,18,http://192.168.64.3/files/file_extra_13_10513KB.dat,158,0,136
+1786048727783,820,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,12830987,145,18,18,http://192.168.64.3/files/file_extra_4_12530KB.dat,19,0,0
+1786048728346,378,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,2342154,144,18,18,http://192.168.64.3/files/file_extra_9_2287KB.dat,34,0,0
+1786048726301,2479,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,52429068,134,19,19,http://192.168.64.3/files/file_50MB.dat,11,0,0
+1786048728380,526,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,3247370,144,19,19,http://192.168.64.3/files/file_extra_8_3171KB.dat,146,0,0
+1786048728769,154,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,102665,135,19,19,http://192.168.64.3/files/file_100KB.dat,55,0,23
+1786048728484,584,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,2067722,144,19,19,http://192.168.64.3/files/file_extra_6_2019KB.dat,176,0,0
+1786048728780,482,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,1048842,133,19,19,http://192.168.64.3/files/file_1MB.dat,363,0,0
+1786048728481,787,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,8923402,144,20,20,http://192.168.64.3/files/file_extra_5_8714KB.dat,22,0,0
+1786048727933,1494,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,5796106,144,20,20,http://192.168.64.3/files/file_extra_2_5660KB.dat,20,0,0
+1786048729578,33,GET Random File,404,Not Found,Capacity Test - Thread Group 1-4,text,false,,490,123,20,20,http://192.168.64.3/filepath,33,0,0
+1786048724276,5375,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,52429069,134,20,20,http://192.168.64.3/files/file_50MB.dat,15,0,4
+1786048728583,1074,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,10765579,146,20,20,http://192.168.64.3/files/file_extra_13_10513KB.dat,35,0,0
+1786048728925,816,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11538699,146,20,20,http://192.168.64.3/files/file_extra_10_11268KB.dat,22,0,0
+1786048728079,1667,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,4607242,145,20,20,http://192.168.64.3/files/file_extra_11_4499KB.dat,28,0,0
+1786048727273,2692,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,5978379,144,21,21,http://192.168.64.3/files/file_extra_7_5838KB.dat,43,0,18
+1786048729652,458,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,5978378,144,21,21,http://192.168.64.3/files/file_extra_7_5838KB.dat,11,0,0
+1786048729772,340,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,4607243,145,21,21,http://192.168.64.3/files/file_extra_11_4499KB.dat,24,0,9
+1786048730150,17,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1284,133,21,21,http://192.168.64.3/files/file_1KB.dat,17,0,0
+1786048730263,18,GET Random File,404,Not Found,Capacity Test - Thread Group 1-22,text,false,,491,123,22,22,http://192.168.64.3/filepath,18,0,8
+1786048728516,2060,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,8654090,145,22,22,http://192.168.64.3/files/file_extra_15_8451KB.dat,45,0,0
+1786048730385,252,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,1362186,144,22,22,http://192.168.64.3/files/file_extra_1_1330KB.dat,24,0,0
+1786048730724,63,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,102664,135,23,23,http://192.168.64.3/files/file_100KB.dat,19,0,0
+1786048730587,501,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,3247370,144,23,23,http://192.168.64.3/files/file_extra_8_3171KB.dat,33,0,0
+1786048730923,293,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,2342154,144,23,23,http://192.168.64.3/files/file_extra_9_2287KB.dat,21,0,0
+1786048729931,1346,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,8923402,144,24,24,http://192.168.64.3/files/file_extra_5_8714KB.dat,15,0,0
+1786048730682,616,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5796106,144,24,24,http://192.168.64.3/files/file_extra_2_5660KB.dat,141,0,0
+1786048730478,923,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,12830987,145,24,24,http://192.168.64.3/files/file_extra_4_12530KB.dat,19,0,0
+1786048731581,249,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,2067722,144,25,25,http://192.168.64.3/files/file_extra_6_2019KB.dat,22,0,0
+1786048729269,2581,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,5998859,144,25,25,http://192.168.64.3/files/file_extra_3_5858KB.dat,41,0,17
+1786048732472,26,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,1284,133,26,26,http://192.168.64.3/files/file_1KB.dat,25,0,0
+1786048730078,2846,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,11538699,146,27,27,http://192.168.64.3/files/file_extra_10_11268KB.dat,17,0,0
+1786048732578,444,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,1048842,133,27,27,http://192.168.64.3/files/file_1MB.dat,27,0,0
+1786048731759,1434,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,10765579,146,27,27,http://192.168.64.3/files/file_extra_13_10513KB.dat,22,0,0
+1786048732880,314,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,2067722,144,27,27,http://192.168.64.3/files/file_extra_6_2019KB.dat,26,0,0
+1786048732880,330,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,1362186,144,27,27,http://192.168.64.3/files/file_extra_1_1330KB.dat,26,0,0
+1786048732247,1016,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,8654090,145,28,28,http://192.168.64.3/files/file_extra_15_8451KB.dat,148,0,0
+1786048726773,6571,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,5998859,144,28,28,http://192.168.64.3/files/file_extra_3_5858KB.dat,39,0,20
+1786048730276,3085,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,52429068,134,28,28,http://192.168.64.3/files/file_50MB.dat,11,0,0
+1786048733258,264,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,102665,135,28,28,http://192.168.64.3/files/file_100KB.dat,55,0,26
+1786048731875,1760,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,11652363,146,28,28,http://192.168.64.3/files/file_extra_14_11379KB.dat,24,0,0
+1786048733090,796,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8923402,144,29,29,http://192.168.64.3/files/file_extra_5_8714KB.dat,144,0,0
+1786048731851,2071,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,2342154,144,29,29,http://192.168.64.3/files/file_extra_9_2287KB.dat,25,0,0
+1786048731262,2942,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,5998859,144,29,29,http://192.168.64.3/files/file_extra_3_5858KB.dat,42,0,22
+1786048734080,449,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,3247370,144,30,30,http://192.168.64.3/files/file_extra_8_3171KB.dat,26,0,0
+1786048733223,1845,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,5796106,144,31,31,http://192.168.64.3/files/file_extra_2_5660KB.dat,692,0,0
+1786048729967,5128,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,10040587,145,31,31,http://192.168.64.3/files/file_extra_12_9805KB.dat,13,0,0
+1786048734205,1105,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,2067722,144,32,32,http://192.168.64.3/files/file_extra_6_2019KB.dat,34,0,0
+1786048735049,269,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1048842,133,32,32,http://192.168.64.3/files/file_1MB.dat,26,0,0
+1786048735575,161,GET Random File,404,Not Found,Capacity Test - Thread Group 1-3,text,false,,490,123,32,32,http://192.168.64.3/filepath,161,0,0
+1786048735581,159,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,1284,133,32,32,http://192.168.64.3/files/file_1KB.dat,159,0,0
+1786048735763,55,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,1285,133,33,33,http://192.168.64.3/files/file_1KB.dat,55,0,25
+1786048734460,1692,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,8654090,145,33,33,http://192.168.64.3/files/file_extra_15_8451KB.dat,22,0,0
+1786048732327,4107,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,12830987,145,34,34,http://192.168.64.3/files/file_extra_4_12530KB.dat,18,0,0
+1786048734679,2114,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,5796106,144,35,35,http://192.168.64.3/files/file_extra_2_5660KB.dat,156,0,0
+1786048732925,4168,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,10765579,146,35,35,http://192.168.64.3/files/file_extra_13_10513KB.dat,40,0,0
+1786048735981,1315,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,12830987,145,36,36,http://192.168.64.3/files/file_extra_4_12530KB.dat,151,0,0
+1786048737083,421,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,3247370,144,36,36,http://192.168.64.3/files/file_extra_8_3171KB.dat,28,0,0
+1786048737758,307,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,1048842,133,37,37,http://192.168.64.3/files/file_1MB.dat,29,0,0
+1786048736325,2164,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11538699,146,38,38,http://192.168.64.3/files/file_extra_10_11268KB.dat,54,0,0
+1786048738783,39,GET Random File,404,Not Found,Capacity Test - Thread Group 1-6,text,false,,490,123,39,39,http://192.168.64.3/filepath,39,0,0
+1786048739067,210,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,102664,135,40,40,http://192.168.64.3/files/file_100KB.dat,23,0,0
+1786048733761,5615,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,5998859,144,40,40,http://192.168.64.3/files/file_extra_3_5858KB.dat,56,0,29
+1786048736069,3322,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,1362186,144,40,40,http://192.168.64.3/files/file_extra_1_1330KB.dat,448,0,0
+1786048738247,1292,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,11652363,146,40,40,http://192.168.64.3/files/file_extra_14_11379KB.dat,42,0,0
+1786048727767,11813,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,10040588,145,40,40,http://192.168.64.3/files/file_extra_12_9805KB.dat,41,0,22
+1786048738783,814,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,8654090,145,40,40,http://192.168.64.3/files/file_extra_15_8451KB.dat,39,0,0
+1786048734767,4833,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,2342155,144,40,40,http://192.168.64.3/files/file_extra_9_2287KB.dat,201,0,24
+1786048735098,4592,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,4607242,145,40,40,http://192.168.64.3/files/file_extra_11_4499KB.dat,37,0,0
+1786048736764,2950,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,1362187,144,40,40,http://192.168.64.3/files/file_extra_1_1330KB.dat,219,0,31
+1786048739584,269,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,102664,135,41,41,http://192.168.64.3/files/file_100KB.dat,23,0,0
+1786048740063,26,GET Random File,404,Not Found,Capacity Test - Thread Group 1-28,text,false,,490,123,41,41,http://192.168.64.3/filepath,26,0,0
+1786048737096,3391,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,5998858,144,42,42,http://192.168.64.3/files/file_extra_3_5858KB.dat,37,0,0
+1786048739588,1077,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8923402,144,42,42,http://192.168.64.3/files/file_extra_5_8714KB.dat,26,0,0
+1786048733362,7607,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,104857869,135,43,43,http://192.168.64.3/files/file_100MB.dat,25,0,0
+1786048725077,15941,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,104857869,135,43,43,http://192.168.64.3/files/file_100MB.dat,8,0,0
+1786048740684,432,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,2067722,144,43,43,http://192.168.64.3/files/file_extra_6_2019KB.dat,38,0,0
+1786048740973,285,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,2342154,144,44,44,http://192.168.64.3/files/file_extra_9_2287KB.dat,41,0,0
+1786048735282,6010,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,11652363,146,44,44,http://192.168.64.3/files/file_extra_14_11379KB.dat,165,0,0
+1786048738177,3772,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,5796106,144,45,45,http://192.168.64.3/files/file_extra_2_5660KB.dat,29,0,0
+1786048740123,1972,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11538699,146,45,45,http://192.168.64.3/files/file_extra_10_11268KB.dat,33,0,0
+1786048741461,758,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,3247370,144,45,45,http://192.168.64.3/files/file_extra_8_3171KB.dat,28,0,0
+1786048742249,35,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,1284,133,46,46,http://192.168.64.3/files/file_1KB.dat,35,0,0
+1786048741301,1028,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,2067722,144,46,46,http://192.168.64.3/files/file_extra_6_2019KB.dat,40,0,0
+1786048742681,30,GET Random File,404,Not Found,Capacity Test - Thread Group 1-21,text,false,,490,123,46,46,http://192.168.64.3/filepath,30,0,0
+1786048742780,252,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,1048842,133,47,47,http://192.168.64.3/files/file_1MB.dat,28,0,0
+1786048738263,5000,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,2342155,144,48,48,http://192.168.64.3/files/file_extra_9_2287KB.dat,75,0,38
+1786048731760,11653,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5978379,144,48,48,http://192.168.64.3/files/file_extra_7_5838KB.dat,58,0,22
+1786048740769,2657,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,1362186,144,48,48,http://192.168.64.3/files/file_extra_1_1330KB.dat,30,0,0
+1786048735071,8908,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,4607242,145,49,49,http://192.168.64.3/files/file_extra_11_4499KB.dat,30,0,0
+1786048741022,3158,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,11538699,146,49,49,http://192.168.64.3/files/file_extra_10_11268KB.dat,49,0,0
+1786048734258,10229,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,66,0,34
+1786048743788,733,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,164,0,0
+1786048728274,16281,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,40,0,19
+1786048738759,5815,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,161,0,119
+1786048742681,1928,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,30,0,0
+1786048744626,30,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,30,0,0
+1786048742255,2511,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,551,0,37
+1786048744979,655,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,37,0,0
+1786048745954,136,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-10,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786048745928,162,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-8,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,0,0,0
+1786048745378,956,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,25,0,0
+1786048741294,5053,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,39,0,0
+1786048740756,5757,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,69,0,30
+1786048746851,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-1,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048737263,9777,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,67,0,38
+1786048747280,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-21,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,0,0,0
+1786048747481,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-3,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,0,0,0
+1786048747263,234,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,29,0,0
+1786048743417,4191,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,30,0,0
+1786048747685,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-6,text,false,,2069,0,50,50,http://192.168.64.3/filepath,0,0,0
+1786048743980,4188,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,30,0,0
+1786048739378,9305,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,32,0,0
+1786048748787,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-2,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,0,0,0
+1786048746349,2900,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,23,0,0
+1786048737759,11538,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,64,0,26
+1786048749619,59,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,59,0,29
+1786048743757,6152,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,49,0,24
+1786048749980,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-4,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048749912,176,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,175,0,0
+1786048750381,327,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,39,0,0
+1786048734760,16242,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,24,0,0
+1786048732767,18322,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,55,0,30
+1786048739762,11626,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,79,0,36
+1786048732266,20230,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,211,0,27
+1786048743693,9161,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,39,0,0
+1786048742761,10228,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,63,0,26
+1786048737413,15912,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,44,0,0
+1786048744259,9261,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,48,0,24
+1786048748424,5477,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,34,0,0
+1786048751095,2876,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,190,0,0
+1786048753329,753,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,23,0,0
+1786048735260,19106,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,50,0,24
+1786048747043,7444,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,33,0,0
+1786048754618,26,GET Random File,404,Not Found,Capacity Test - Thread Group 1-5,text,false,,490,123,50,50,http://192.168.64.3/filepath,26,0,0
+1786048754980,273,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,102665,135,50,50,http://192.168.64.3/files/file_100KB.dat,51,0,26
+1786048752281,4107,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,73,0,37
+1786048754921,1971,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,25,0,0
+1786048756104,993,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-27,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,0,0,0
+1786048740257,17044,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,58,0,26
+1786048752501,4968,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,39,0,0
+1786048757304,213,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,30,0,0
+1786048745564,11953,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,18,0,0
+1786048752856,4771,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,89,0,0
+1786048748989,8935,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,73,0,0
+1786048751352,6687,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,176,0,0
+1786048758334,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-24,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,0,0,0
+1786048746514,11832,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,36,0,0
+1786048757865,562,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,31,0,0
+1786048757509,989,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,26,0,0
+1786048752260,6433,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,28,0,0
+1786048744575,14354,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,36,0,0
+1786048748685,10700,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,40,0,0
+1786048759915,28,GET Random File,404,Not Found,Capacity Test - Thread Group 1-49,text,false,,490,123,50,50,http://192.168.64.3/filepath,28,0,0
+1786048755380,4710,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,26,0,0
+1786048753903,6278,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,24,0,0
+1786048739262,20995,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,47,0,19
+1786048741254,19545,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,52,0,22
+1786048754488,6454,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,23,0,0
+1786048760943,24,GET Random File,404,Not Found,Capacity Test - Thread Group 1-36,text,false,,490,123,50,50,http://192.168.64.3/filepath,24,0,0
+1786048761105,44,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,44,0,21
+1786048743265,17902,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,25,0,0
+1786048760378,865,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,24,0,0
+1786048741761,19811,GET Random File,200,OK,Capacity Test - Thread Group 1-45,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,113,0,89
+1786048758040,3572,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,25,0,0
+1786048751391,11523,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,34,0,0
+1786048744491,18533,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,21,0,0
+1786048754370,8753,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,25,0,0
+1786048761169,2291,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,24,0,0
+1786048758932,4570,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,27,0,0
+1786048744559,19041,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,25,0,0
+1786048762865,876,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,27,0,0
+1786048763047,838,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,48,0,0
+1786048753523,11021,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,22,0,0
+1786048752480,12157,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,94,0,26
+1786048764915,31,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-49,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,0,0,0
+1786048758694,6802,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,195,0,0
+1786048765953,18,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-36,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048766103,48,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-27,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786048749299,17054,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,35,0,0
+1786048766355,36,GET Random File,404,Not Found,Capacity Test - Thread Group 1-37,text,false,,490,123,50,50,http://192.168.64.3/filepath,36,0,0
+1786048743063,23339,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,25,0,0
+1786048766406,239,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,29,0,0
+1786048763940,3753,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,24,0,0
+1786048743258,24470,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,74,0,25
+1786048762508,5358,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,35,0,0
+1786048767868,1075,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,35,0,0
+1786048767865,1272,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,36,0,0
+1786048768048,1343,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,24,0,0
+1786048744162,25402,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,22,0,0
+1786048752992,16647,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,178,0,0
+1786048757926,11772,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,29,0,0
+1786048765382,4379,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,25,0,0
+1786048770375,355,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,52,0,0
+1786048771361,32,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-37,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048771415,21,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-33,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048759387,12765,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,38,0,0
+1786048773047,31,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-9,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,0,0,0
+1786048763603,9653,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,32,0,0
+1786048769640,3691,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,33,0,0
+1786048764637,9334,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,27,0,0
+1786048773973,27,GET Random File,404,Not Found,Capacity Test - Thread Group 1-3,text,false,,490,123,50,50,http://192.168.64.3/filepath,27,0,0
+1786048762915,11182,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,23,0,0
+1786048774099,240,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,26,0,0
+1786048757281,17163,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,27,0,0
+1786048752686,22112,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,279,0,240
+1786048753788,21130,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,51,0,23
+1786048763026,12013,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,24,0,0
+1786048775381,401,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,34,0,0
+1786048772865,3135,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,29,0,0
+1786048758347,18429,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,32,0,0
+1786048751847,25422,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,202,0,169
+1786048774919,2678,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,33,0,0
+1786048736436,41594,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,27,0,0
+1786048760801,18068,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,32,0,0
+1786048778980,22,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-3,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048779103,27,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-41,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048772878,6661,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,33,0,0
+1786048778034,1701,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,27,0,0
+1786048780380,36,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-7,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,0,0,0
+1786048759627,21817,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,199,0,24
+1786048777271,5024,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,33,0,0
+1786048782296,27,GET Random File,404,Not Found,Capacity Test - Thread Group 1-1,text,false,,490,123,50,50,http://192.168.64.3/filepath,27,0,0
+1786048760182,22805,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,27,0,0
+1786048769699,13289,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,32,0,0
+1786048782988,255,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,24,0,0
+1786048759980,23315,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,23,0,0
+1786048777865,5480,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,28,0,0
+1786048783345,581,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,36,0,0
+1786048778871,5433,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,30,0,0
+1786048760261,24082,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,30,0,0
+1786048782989,1899,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,25,0,0
+1786048766177,19581,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,26,0,0
+1786048772153,14295,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,30,0,0
+1786048776415,10650,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,61,0,35
+1786048765497,21675,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,41,0,0
+1786048787307,19,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-1,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048727677,59821,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,18,0,0
+1786048783041,4770,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,42,0,0
+1786048787997,19,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-25,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048775040,13363,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,43,0,0
+1786048769568,18968,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,188,0,0
+1786048763333,25452,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,47,0,22
+1786048788787,25,GET Random File,404,Not Found,Capacity Test - Thread Group 1-24,text,false,,490,123,50,50,http://192.168.64.3/filepath,25,0,0
+1786048785760,4557,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,25,0,0
+1786048764544,25781,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,184,0,0
+1786048790763,286,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,30,0,0
+1786048779539,11676,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,27,0,0
+1786048769916,21521,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,68,0,37
+1786048771103,20769,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,56,0,32
+1786048787173,4835,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,32,0,0
+1786048763124,29358,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,173,0,0
+1786048790327,2315,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,30,0,0
+1786048774647,18036,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,49,0,0
+1786048779928,13549,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,28,0,0
+1786048793792,23,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-24,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048784104,10270,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,75,0,42
+1786048791438,3189,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,27,0,0
+1786048787066,7785,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,22,0,0
+1786048776778,18247,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,34,0,0
+1786048795760,34,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-38,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048786450,9454,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,33,0,0
+1786048792684,4813,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,32,0,0
+1786048784304,13603,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,26,0,0
+1786048797909,26,GET Random File,404,Not Found,Capacity Test - Thread Group 1-44,text,false,,490,123,50,50,http://192.168.64.3/filepath,26,0,0
+1786048770951,27076,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,66,0,33
+1786048787506,10735,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,77,0,38
+1786048798028,274,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,26,0,0
+1786048773257,25157,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,28,0,0
+1786048794376,5811,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,36,0,0
+1786048788355,12015,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,166,0,135
+1786048781445,19467,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,31,0,0
+1786048798242,2742,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,40,0,0
+1786048776355,25571,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,64,0,28
+1786048778047,24198,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,53,0,24
+1786048800189,2752,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,40,0,0
+1786048802916,89,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,89,0,41
+1786048803034,17,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-36,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048792180,12952,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,28,0,0
+1786048794852,10577,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,31,0,0
+1786048791874,13699,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,33,0,0
+1786048798792,8035,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,70,0,43
+1786048802245,5115,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,28,0,0
+1786048793479,14435,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,24,0,0
+1786048788537,19727,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,46,0,0
+1786048808265,70,GET Random File,404,Not Found,Capacity Test - Thread Group 1-28,text,false,,491,123,50,50,http://192.168.64.3/filepath,70,0,23
+1786048783980,25942,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,71,0,32
+1786048787998,22197,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,47,0,0
+1786048809924,291,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,32,0,0
+1786048730762,79894,GET Random File,200,OK,Capacity Test - Thread Group 1-23,,true,,52429069,134,50,50,http://192.168.64.3/files/file_50MB.dat,50,0,22
+1786048788042,22622,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,87,0,39
+1786048810195,2489,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,76,0,33
+1786048813267,27,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,27,0,0
+1786048810664,3227,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,35,0,0
+1786048785382,28834,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,62,0,37
+1786048800369,13874,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,24,0,0
+1786048808037,6220,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,186,0,157
+1786048784345,30380,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,37,0,0
+1786048814924,35,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-3,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048788404,26773,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,31,0,0
+1786048800912,14283,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,184,0,0
+1786048807916,7554,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,38,0,0
+1786048805429,10513,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,24,0,0
+1786048795331,21145,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,51,0,0
+1786048797684,19800,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,43,0,0
+1786048792997,24616,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,79,0,39
+1786048817613,28,GET Random File,404,Not Found,Capacity Test - Thread Group 1-25,text,false,,490,123,50,50,http://192.168.64.3/filepath,28,0,0
+1786048795027,23268,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,47,0,0
+1786048818271,26,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-28,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,0,0,0
+1786048818294,392,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,102665,135,50,50,http://192.168.64.3/files/file_100KB.dat,95,0,39
+1786048814244,5379,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,43,0,0
+1786048805197,14438,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,52,0,0
+1786048792307,28857,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,145,0,118
+1786048822619,24,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-25,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048801927,20943,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,32,0,0
+1786048814726,8374,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,69,0,38
+1786048819634,3470,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,46,0,0
+1786048795904,27460,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,93,0,55
+1786048796442,27140,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,33,0,0
+1786048792484,31678,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,36,0,0
+1786048823265,2713,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,171,0,120
+1786048819929,6174,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,55,0,31
+1786048815195,10911,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,60,0,0
+1786048800767,26773,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,158,0,120
+1786048807914,20058,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,35,0,0
+1786048814257,13885,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,48,0,0
+1786048805573,23173,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,33,0,0
+1786048828747,27,GET Random File,404,Not Found,Capacity Test - Thread Group 1-27,text,false,,490,123,50,50,http://192.168.64.3/filepath,27,0,0
+1786048815205,13909,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,201,0,0
+1786048829115,278,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,32,0,0
+1786048824634,4953,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,35,0,0
+1786048824162,5840,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,84,0,38
+1786048745904,85423,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,34,0,0
+1786048823582,8156,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,48,0,0
+1786048805133,27601,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,81,0,41
+1786048806828,26889,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,28,0,0
+1786048833754,92,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,92,0,48
+1786048834123,25,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-22,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048803248,31107,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,34,0,0
+1786048831330,3379,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,153,0,123
+1786048821164,13687,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,179,0,0
+1786048814216,20774,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,34,0,0
+1786048807361,28284,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,188,0,0
+1786048823365,13226,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,27,0,0
+1786048826106,11473,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,33,0,0
+1786048815469,23012,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,33,0,0
+1786048817483,21194,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,78,0,35
+1786048834852,5814,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,34,0,0
+1786048840667,23,GET Random File,404,Not Found,Capacity Test - Thread Group 1-1,text,false,,490,123,50,50,http://192.168.64.3/filepath,23,0,0
+1786048827616,14749,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,60,0,33
+1786048815941,26511,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,31,0,0
+1786048842365,333,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,31,0,0
+1786048815177,27935,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,108,0,47
+1786048816475,27263,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,72,0,27
+1786048823099,20795,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,48,0,0
+1786048733345,110706,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,31,0,0
+1786048836331,8004,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,29,0,0
+1786048839117,5358,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,61,0,28
+1786048842453,2804,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,103,0,57
+1786048845671,22,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-1,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048831739,14010,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,69,0,30
+1786048835645,10756,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,36,0,0
+1786048843740,3066,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,30,0,0
+1786048815667,31357,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,36,0,0
+1786048832735,14613,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,32,0,0
+1786048847366,31,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-25,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048828142,19842,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,25,0,0
+1786048834356,14930,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,44,0,0
+1786048826107,23994,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,100,0,31
+1786048850101,37,GET Random File,404,Not Found,Capacity Test - Thread Group 1-5,text,false,,490,123,50,50,http://192.168.64.3/filepath,37,0,0
+1786048846402,6115,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,75,0,41
+1786048847454,5147,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,38,0,0
+1786048852517,337,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,29,0,0
+1786048736265,116970,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,52429069,134,50,50,http://192.168.64.3/files/file_50MB.dat,58,0,22
+1786048822870,30406,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,43,0,0
+1786048845749,7789,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,32,0,0
+1786048750954,102660,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,52429069,134,50,50,http://192.168.64.3/files/file_50MB.dat,70,0,27
+1786048827541,26628,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,181,0,0
+1786048855109,30,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-5,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048852601,2824,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,40,0,0
+1786048828266,27797,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,34,0,0
+1786048827972,28650,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,72,0,28
+1786048853278,3465,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,92,0,39
+1786048857520,30,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-9,text,false,,2069,0,50,50,http://192.168.64.3/files/file_50MB.dat,0,0,0
+1786048739602,118071,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,186,0,0
+1786048843895,13901,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,56,0,0
+1786048844059,14188,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,68,0,34
+1786048838680,19722,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,48,0,0
+1786048847027,11968,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,33,0,0
+1786048838749,20487,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,37,0,0
+1786048859236,35,GET Random File,404,Not Found,Capacity Test - Thread Group 1-27,text,false,,490,123,50,50,http://192.168.64.3/filepath,35,0,0
+1786048836592,24237,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,231,0,0
+1786048860831,308,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,102665,135,50,50,http://192.168.64.3/files/file_100KB.dat,68,0,36
+1786048857601,5159,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,33,0,0
+1786048837580,25554,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,45,0,0
+1786048834990,28947,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,36,0,0
+1786048858284,5795,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,50,0,0
+1786048864242,31,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-27,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048833717,31116,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,27,0,0
+1786048856622,8342,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,27,0,0
+1786048865838,64,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-29,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048850672,15591,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,70,0,47
+1786048838482,27978,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,40,0,0
+1786048863937,3526,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,93,0,43
+1786048844475,23123,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,186,0,0
+1786048853539,14431,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,203,0,0
+1786048853616,14899,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,74,0,38
+1786048857678,12148,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,66,0,30
+1786048849286,20662,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,79,0,38
+1786048856063,14769,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,40,0,0
+1786048847349,24665,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,34,0,0
+1786048872015,57,GET Random File,404,Not Found,Capacity Test - Thread Group 1-46,text,false,,491,123,50,50,http://192.168.64.3/filepath,57,0,23
+1786048866460,7524,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,70,0,29
+1786048873985,504,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,206,0,0
+1786048868947,5644,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,47,0,0
+1786048870836,4611,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,69,0,32
+1786048844336,31375,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,28,0,0
+1786048847984,28421,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,41,0,0
+1786048848747,27830,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,35,0,0
+1786048877017,58,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-46,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048864080,14336,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,44,0,0
+1786048867970,10571,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,33,0,0
+1786048852371,26904,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,61,0,33
+1786048875711,3676,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,44,0,0
+1786048858996,21440,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,83,0,41
+1786048866263,14633,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,36,0,0
+1786048860110,20807,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,176,0,137
+1786048878992,2582,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,40,0,0
+1786048869236,14005,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,63,0,34
+1786048857796,25565,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,42,0,0
+1786048878541,5531,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,47,0,0
+1786048854169,30690,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,28,0,0
+1786048884860,79,GET Random File,404,Not Found,Capacity Test - Thread Group 1-38,text,false,,491,123,50,50,http://192.168.64.3/filepath,79,0,41
+1786048858247,26782,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,41,0,0
+1786048762304,122771,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,29,0,0
+1786048885029,521,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,210,0,0
+1786048880436,6234,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,42,0,0
+1786048864964,22119,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,194,0,0
+1786048858403,29087,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,45,0,0
+1786048885078,2861,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,70,0,27
+1786048880716,8470,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,194,0,0
+1786048768940,120701,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,25,0,0
+1786048889864,31,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,31,0,0
+1786048887083,2828,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,38,0,0
+1786048876405,13845,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,272,0,41
+1786048862517,28622,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,71,0,39
+1786048876577,14759,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,55,0,22
+1786048870832,21029,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,34,0,0
+1786048880917,11069,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,188,0,0
+1786048868517,24395,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,29,0,0
+1786048879275,15004,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,30,0,0
+1786048869826,26505,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,33,0,0
+1786048864833,31610,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,73,0,31
+1786048896443,33,GET Random File,404,Not Found,Capacity Test - Thread Group 1-24,text,false,,490,123,50,50,http://192.168.64.3/filepath,33,0,0
+1786048867598,29607,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,39,0,0
+1786048897205,246,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,37,0,0
+1786048791216,106266,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,29,0,0
+1786048891139,6377,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,47,0,0
+1786048739691,158614,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,29,0,0
+1786048890251,8619,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,37,0,0
+1786048869948,29256,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,27,0,0
+1786048894864,4692,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,28,0,0
+1786048774446,125952,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,33,0,0
+1786048878417,22660,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,240,0,0
+1786048887490,13958,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,77,0,32
+1786048901454,24,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-24,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048898311,3310,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,73,0,30
+1786048891861,10882,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,69,0,28
+1786048884073,19980,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,42,0,0
+1786048890085,14157,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,49,0,0
+1786048902207,2670,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,77,0,33
+1786048901077,4868,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,31,0,0
+1786048892088,14055,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,79,0,35
+1786048883990,24599,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,38,0,0
+1786048908590,42,GET Random File,404,Not Found,Capacity Test - Thread Group 1-44,text,false,,490,123,50,50,http://192.168.64.3/filepath,42,0,0
+1786048903317,5723,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,39,0,0
+1786048909040,331,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,52,0,0
+1786048880897,28709,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,43,0,0
+1786048883362,27089,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,73,0,32
+1786048883241,27504,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,213,0,0
+1786048889643,21656,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,90,0,45
+1786048898870,13956,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,29,0,0
+1786048913596,33,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,33,0,0
+1786048899204,14572,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,37,0,0
+1786048882016,31953,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,82,0,43
+1786048914047,46,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-16,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048906454,7684,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,60,0,33
+1786048910745,3509,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,44,0,0
+1786048904053,11403,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,91,0,39
+1786048901448,14387,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,33,0,0
+1786048891987,24998,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,38,0,0
+1786048896332,21467,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,32,0,0
+1786048918597,34,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-44,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,0,0,0
+1786048913970,5034,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,54,0,0
+1786048891336,28199,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,29,0,0
+1786048919536,30,GET Random File,404,Not Found,Capacity Test - Thread Group 1-50,text,false,,490,123,50,50,http://192.168.64.3/filepath,30,0,0
+1786048889186,30821,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,40,0,0
+1786048892912,27267,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,28,0,0
+1786048920011,265,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,102665,135,50,50,http://192.168.64.3/files/file_100KB.dat,77,0,42
+1786048914138,8283,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,41,0,0
+1786048915755,6892,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,41,0,0
+1786048894279,28520,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,27,0,0
+1786048920179,3337,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,82,0,47
+1786048900399,23412,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,248,0,219
+1786048924543,25,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-50,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048922646,3369,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,26,0,0
+1786048911299,14975,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,44,0,0
+1786048915836,11821,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,45,0,0
+1786048906143,22302,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,32,0,0
+1786048912826,16174,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,508,0,0
+1786048904242,25582,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,51,0,0
+1786048899864,31138,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,38,0,0
+1786048902744,28854,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,184,0,0
+1786048927655,5003,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,32,0,0
+1786048928445,5779,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,33,0,0
+1786048906085,28658,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,37,0,0
+1786048934745,82,GET Random File,404,Not Found,Capacity Test - Thread Group 1-37,text,false,,491,123,50,50,http://192.168.64.3/filepath,82,0,37
+1786048919049,15787,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,356,0,136
+1786048934837,298,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,30,0,0
+1786048907213,28738,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,28,0,0
+1786048927657,8315,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,201,0,0
+1786048922799,13864,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,68,0,31
+1786048913777,23632,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,81,0,32
+1786048939753,41,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,41,0,0
+1786048925188,14818,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,236,0,0
+1786048936664,3537,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,200,0,0
+1786048926274,14933,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,44,0,0
+1786048929825,11489,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,27,0,0
+1786048919006,22712,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,30,0,0
+1786048916987,25284,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,42,0,0
+1786048939837,2777,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,31,0,0
+1786048915458,30540,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,40,0,0
+1786048917801,28281,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,79,0,37
+1786048941208,5575,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,45,0,0
+1786048942271,6899,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,74,0,29
+1786048941718,9185,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,223,0,0
+1786048937410,15343,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,42,0,0
+1786048952754,33,GET Random File,404,Not Found,Capacity Test - Thread Group 1-14,text,false,,490,123,50,50,http://192.168.64.3/filepath,33,0,0
+1786048929536,23427,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,163,0,133
+1786048952964,318,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,55,0,0
+1786048923597,29819,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,286,0,239
+1786048923811,32061,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,40,0,0
+1786048829639,126470,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,35,0,0
+1786048823303,133476,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,30,0,0
+1786048931003,26219,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,29,0,0
+1786048934226,23198,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,31,0,0
+1786048957763,25,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-14,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048945997,12083,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,36,0,0
+1786048941315,16887,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,33,0,0
+1786048929000,30398,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,48,0,0
+1786048956111,3855,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,251,0,37
+1786048931599,28791,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,180,0,0
+1786048957965,2696,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,38,0,0
+1786048944755,16755,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,40,0,0
+1786048958081,7690,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,226,0,0
+1786048932660,33297,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,73,0,38
+1786048961115,5952,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,33,0,0
+1786048946081,21096,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,43,0,0
+1786048944840,22353,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,38,0,0
+1786048967179,30,GET Random File,404,Not Found,Capacity Test - Thread Group 1-31,text,false,,490,123,50,50,http://192.168.64.3/filepath,30,0,0
+1786048967192,32,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,32,0,0
+1786048941671,25652,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,29,0,0
+1786048733023,234616,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,32,0,0
+1786048959399,8589,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,93,0,45
+1786048957224,11536,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,89,0,32
+1786048967988,826,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,221,0,0
+1786048958202,10632,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,59,0,30
+1786048730677,238484,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,19,0,0
+1786048965957,3421,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,58,0,0
+1786048950906,18998,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,96,0,39
+1786048750931,218983,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,53,0,26
+1786048949169,20773,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,190,0,0
+1786048751007,219036,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,45,0,0
+1786048960390,10004,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,103,0,51
+1786048969942,620,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,40,0,0
+1786048862761,108775,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,44,0,0
+1786048970959,630,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,31,0,0
+1786048970393,1303,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,222,0,0
+1786048961510,10289,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,211,0,0
+1786048968759,3045,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,31,0,0
+1786048971800,22,GET Random File,404,Not Found,Capacity Test - Thread Group 1-37,text,false,,490,123,50,50,http://192.168.64.3/filepath,22,0,0
+1786048972186,27,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-31,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786048972201,23,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-16,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786048767731,204493,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,26,0,0
+1786048962764,9554,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,74,0,34
+1786048957424,15096,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,67,0,32
+1786048972318,577,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,32,0,0
+1786048967066,5946,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,39,0,0
+1786048968833,4864,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,35,0,0
+1786048969905,3804,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,31,0,0
+1786048973767,24,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,24,0,0
+1786048757518,218399,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,35,0,0
+1786048972520,3402,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,42,0,0
+1786048975968,21,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-27,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,0,0,0
+1786048956781,19599,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,74,0,25
+1786048940007,36613,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,232,0,0
+1786048946782,29870,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,40,0,0
+1786048972998,3657,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,42,0,0
+1786048976801,24,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-37,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786048969916,7233,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,75,0,37
+1786048975754,1402,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,230,0,0
+1786048977151,515,GET Random File,404,Not Found,Capacity Test - Thread Group 1-8,text,false,,490,123,50,50,http://192.168.64.3/filepath,515,0,0
+1786048976380,1964,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,34,0,0
+1786048965600,12807,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,283,0,241
+1786048977528,1215,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,37,0,0
+1786048973840,4949,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,1914,0,0
+1786048774800,204350,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,24,0,0
+1786048978840,360,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,37,0,0
+1786048897482,82083,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,52429069,134,50,50,http://192.168.64.3/files/file_50MB.dat,263,0,41
+1786048975754,4121,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,230,0,0
+1786048979905,210,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,210,0,0
+1786048977180,3458,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,72,0,36
+1786048874592,106094,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,42,0,0
+1786048976620,4100,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,30,0,0
+1786048978764,2016,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,28,0,0
+1786048970046,10791,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,77,0,31
+1786048971537,9313,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,81,0,43
+1786048973013,8521,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,48,0,0
+1786048977321,4439,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,43,0,0
+1786048981384,404,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,21,0,0
+1786048980838,1311,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,30,0,0
+1786048982155,309,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,206,0,0
+1786048965771,19057,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,398,0,148
+1786048981628,3205,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,89,0,46
+1786048984830,56,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,38,0,0
+1786048783296,201848,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,33,0,0
+1786048925014,60206,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,26,0,0
+1786048953417,31889,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,40,0,0
+1786048985845,37,GET Random File,404,Not Found,Capacity Test - Thread Group 1-20,text,false,,490,123,50,50,http://192.168.64.3/filepath,37,0,0
+1786048984912,993,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,34,0,0
+1786048980687,5314,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,173,0,17
+1786048909606,76464,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,36,0,0
+1786048761575,224500,GET Random File,200,OK,Capacity Test - Thread Group 1-45,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,20,0,0
+1786048975922,10204,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,3247371,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,209,0,168
+1786048890038,96329,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,40,0,0
+1786048986383,32,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-43,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,0,0,0
+1786048980850,5598,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,32,0,0
+1786048986630,363,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,30,0,0
+1786048981535,5462,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,32,0,0
+1786048819623,167461,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,33,0,0
+1786048979153,8011,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,33,0,19
+1786048987155,46,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,46,0,0
+1786048798416,188785,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,68,0,28
+1786048987204,214,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,214,0,29
+1786048986449,1120,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,34,0,0
+1786048981805,6011,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,214,0,28
+1786048986126,1880,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,279,0,0
+1786048976653,11427,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,974,0,36
+1786048988081,217,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,22,0,0
+1786048977996,10389,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,187,0,0
+1786048975754,12670,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,10040588,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,377,0,336
+1786048984204,4231,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,36,0,0
+1786048979566,8963,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,12830988,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,67,0,33
+1786048980400,8609,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,552,0,0
+1786048988385,880,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,20,0,0
+1786048988529,768,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,27,0,0
+1786048987164,2142,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,46,0,0
+1786048985221,4130,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,224,0,32
+1786048986997,3050,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,10765579,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,37,0,0
+1786048989906,772,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-46,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,0,0,0
+1786048990846,36,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-20,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,0,0,0
+1786048989009,1947,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,26,0,0
+1786048988768,2275,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,29,0,0
+1786048980960,10314,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,11538700,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,62,0,32
+1786048991274,19,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,19,0,0
+1786048969169,22272,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,8923403,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,231,0,31
+1786048986072,5432,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,248,0,36
+1786048988424,3284,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,25,0,0
+1786048991442,389,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,41,0,0
+1786048991455,689,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,38,0,0
+1786048967322,24846,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,191,0,0
+1786048922421,69762,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,31,0,0
+1786048992159,31,GET Random File,404,Not Found,Capacity Test - Thread Group 1-8,text,false,,490,123,50,50,http://192.168.64.3/filepath,31,0,0
+1786048886671,105761,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,32,0,0
+1786048986002,6433,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,34,0,0
+1786048992206,362,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,36,0,0
+1786048853240,139629,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,83,0,39
+1786048993089,17,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-39,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,0,0,0
+1786048986369,6993,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,149,0,126
+1786048897516,96099,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,32,0,0
+1786048910451,83285,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,36,0,0
+1786048993767,37,GET Random File,404,Not Found,Capacity Test - Thread Group 1-38,text,false,,490,123,50,50,http://192.168.64.3/filepath,37,0,0
+1786048830006,163844,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,227,0,0
+1786048992435,1751,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,20,0,0
+1786048993537,870,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,28,0,0
+1786048993389,1143,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,46,0,0
+1786048991630,3047,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,27,0,0
+1786048843114,151617,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,43,0,0
+1786048992007,3027,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,28,0,0
+1786048982189,12917,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,208,0,0
+1786048995106,185,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,25,0,0
+1786048863134,132435,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,25,0,0
+1786048992168,3436,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,172,0,0
+1786048996280,18,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-27,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786048996448,102,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-19,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,0,0,0
+1786048978408,18225,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,43,0,0
+1786048996630,335,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,24,0,0
+1786048997435,32,GET Random File,404,Not Found,Capacity Test - Thread Group 1-7,text,false,,490,123,50,50,http://192.168.64.3/filepath,32,0,0
+1786048996456,1182,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,27,0,0
+1786048935952,62341,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,38,0,0
+1786048955874,42439,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,195,0,0
+1786048998390,147,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,39,0,0
+1786048996633,2000,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,21,0,0
+1786048998538,205,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,205,0,0
+1786048992435,6336,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,52,0,20
+1786048998772,30,GET Random File,404,Not Found,Capacity Test - Thread Group 1-11,text,false,,490,123,50,50,http://192.168.64.3/filepath,30,0,0
+1786048987816,11892,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,26,0,0
+1786048999708,34,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,29,0,0
+1786048994017,5798,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,40,0,0
+1786048997152,2734,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,8923402,144,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,37,0,0
+1786048982319,17591,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,31,0,0
+1786048999910,185,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,1362186,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,28,0,0
+1786049000112,21,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-31,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,0,0,0
+1786048989839,10305,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,25,0,0
+1786048810664,189526,GET Random File,200,OK,Capacity Test - Thread Group 1-23,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,81,0,35
+1786048992871,7499,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,164,0,143
+1786048997167,3734,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,37,0,0
+1786048972226,29126,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,68,0,32
+1786048875841,125671,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,40,0,0
+1786048990229,11293,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,33,0,0
+1786048985307,16335,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,5796107,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,172,0,127
+1786049000144,1745,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,12830987,145,50,50,http://192.168.64.3/files/file_extra_4_12530KB.dat,219,0,0
+1786049001352,637,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,201,0,0
+1786048984204,18039,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,71,0,36
+1786048967647,34718,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,104857870,135,50,50,http://192.168.64.3/files/file_100MB.dat,538,0,33
+1786049001620,749,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,21,0,0
+1786048935973,66520,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,38,0,0
+1786049002493,151,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,151,0,119
+1786048986078,16708,GET Random File,200,OK,Capacity Test - Thread Group 1-45,,true,,5978379,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,67,0,39
+1786049002443,571,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,23,0,0
+1786049001453,1795,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,206,0,0
+1786049003389,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-36,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,0,0,0
+1786049002166,1272,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,5978378,144,50,50,http://192.168.64.3/files/file_extra_7_5838KB.dat,27,0,0
+1786049002366,1101,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,22,0,0
+1786049003533,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-26,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,0,0,0
+1786049003780,19,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-11,text,false,,2069,0,50,50,http://192.168.64.3/files/file_1KB.dat,0,0,0
+1786048982522,22072,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,31,0,0
+1786049000371,4231,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,27,0,0
+1786049004594,244,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,32,0,0
+1786048998767,6138,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,28,0,0
+1786049004935,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-14,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,0,0,0
+1786049002787,2206,GET Random File,200,OK,Capacity Test - Thread Group 1-45,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,200,0,0
+1786049004905,216,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,33,0,0
+1786049005150,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-49,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,0,0,0
+1786048995571,9607,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,461,0,23
+1786048997209,7972,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,35,0,0
+1786049001445,3793,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,2067723,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,55,0,22
+1786048993362,11915,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,39,0,0
+1786049005277,192,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,1284,133,50,50,http://192.168.64.3/files/file_1KB.dat,192,0,0
+1786048999815,5791,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,27,0,0
+1786049005606,132,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,1048842,133,50,50,http://192.168.64.3/files/file_1MB.dat,33,0,0
+1786049001514,4417,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,2342155,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,75,0,39
+1786049006356,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-48,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,0,0,0
+1786049006450,24,GET Random File,404,Not Found,Capacity Test - Thread Group 1-19,text,false,,490,123,50,50,http://192.168.64.3/filepath,24,0,0
+1786049006630,0,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-10,text,false,,2069,0,50,50,http://192.168.64.3/filepath,0,0,0
+1786049004717,2506,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,1048843,133,50,50,http://192.168.64.3/files/file_1MB.dat,47,0,20
+1786049007502,227,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,24,0,0
+1786048977198,30661,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,52429069,134,50,50,http://192.168.64.3/files/file_50MB.dat,62,0,30
+1786048992169,15912,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5998859,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,265,0,33
+1786049007859,226,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,22,0,0
+1786048993431,14702,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,41,0,0
+1786049007367,778,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,5998858,144,50,50,http://192.168.64.3/files/file_extra_3_5858KB.dat,21,0,0
+1786048991133,17122,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,36,0,0
+1786049007168,1127,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,5796106,144,50,50,http://192.168.64.3/files/file_extra_2_5660KB.dat,40,0,0
+1786049008133,190,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,2342154,144,50,50,http://192.168.64.3/files/file_extra_9_2287KB.dat,24,0,0
+1786048998316,10192,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,4607243,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,78,0,30
+1786049008255,417,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,20,0,0
+1786048994913,14694,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,42,0,19
+1786049009608,27,GET Random File,404,Not Found,Capacity Test - Thread Group 1-46,text,false,,490,123,50,50,http://192.168.64.3/filepath,27,0,0
+1786048997007,12643,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,39,0,0
+1786049009650,30,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,30,0,0
+1786049001639,8352,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,36,0,0
+1786049009601,418,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,3247370,144,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,22,0,0
+1786049010281,194,GET Random File,200,OK,Capacity Test - Thread Group 1-15,,true,,102664,135,50,50,http://192.168.64.3/files/file_100KB.dat,20,0,0
+1786049009914,1046,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,21,0,0
+1786049008386,2577,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,52,0,27
+1786049001523,9456,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,36,0,0
+1786049001642,9458,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,4607242,145,50,50,http://192.168.64.3/files/file_extra_11_4499KB.dat,40,0,0
+1786049002159,9763,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,104857869,135,50,50,http://192.168.64.3/files/file_100MB.dat,33,0,0
+1786049011922,200,GET Random File,200,OK,Capacity Test - Thread Group 1-8,,true,,2067722,144,50,50,http://192.168.64.3/files/file_extra_6_2019KB.dat,24,0,0
+1786049012542,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-47,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_5_8714KB.dat,0,0,0
+1786049012865,20,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-16,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_8_3171KB.dat,0,0,0
+1786049013139,21,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-5,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,0,0,0
+1786048993852,19558,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,8654091,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,237,0,33
+1786049011356,2076,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,1362187,144,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,41,0,23
+1786049012167,1665,GET Random File,200,OK,Capacity Test - Thread Group 1-6,,true,,10040587,145,50,50,http://192.168.64.3/files/file_extra_12_9805KB.dat,30,0,0
+1786049012369,1544,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,11538699,146,50,50,http://192.168.64.3/files/file_extra_10_11268KB.dat,183,0,0
+1786049013262,1122,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,8654090,145,50,50,http://192.168.64.3/files/file_extra_15_8451KB.dat,23,0,0
+1786048987086,27502,GET Random File,200,OK,Capacity Test - Thread Group 1-17,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,85,0,48
+1786049014600,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-2,text,false,,2069,0,50,50,http://192.168.64.3/files/file_100MB.dat,0,0,0
+1786049014589,19,GET Random File,404,Not Found,Capacity Test - Thread Group 1-17,text,false,,490,123,50,50,http://192.168.64.3/filepath,19,0,0
+1786049014617,67,GET Random File,200,OK,Capacity Test - Thread Group 1-46,,true,,1285,133,50,50,http://192.168.64.3/files/file_1KB.dat,67,0,36
+1786049009991,4818,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,52429068,134,50,50,http://192.168.64.3/files/file_50MB.dat,257,0,0
+1786048995845,18997,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,11652364,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,200,0,25
+1786048993738,21292,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,10765580,146,50,50,http://192.168.64.3/files/file_extra_13_10513KB.dat,245,0,38
+1786049015283,24,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-15,text,false,,2069,0,50,50,http://192.168.64.3/files/file_extra_1_1330KB.dat,0,0,0
+1786049005179,10130,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,11652363,146,50,50,http://192.168.64.3/files/file_extra_14_11379KB.dat,31,0,0
+1786048993620,21827,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,10040588,145,49,49,http://192.168.64.3/files/file_extra_12_9805KB.dat,22,0,8
+1786049010612,4964,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,52429068,134,49,49,http://192.168.64.3/files/file_50MB.dat,24,0,0
+1786049014913,690,GET Random File,200,OK,Capacity Test - Thread Group 1-38,,true,,5796106,144,49,49,http://192.168.64.3/files/file_extra_2_5660KB.dat,22,0,0
+1786049006450,9181,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,104857869,135,48,48,http://192.168.64.3/files/file_100MB.dat,24,0,0
+1786049015577,218,GET Random File,200,OK,Capacity Test - Thread Group 1-28,,true,,2067722,144,48,48,http://192.168.64.3/files/file_extra_6_2019KB.dat,20,0,0
+1786048998316,17526,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,10040588,145,47,47,http://192.168.64.3/files/file_extra_12_9805KB.dat,78,0,30
+1786049005115,10794,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,5998859,144,47,47,http://192.168.64.3/files/file_extra_3_5858KB.dat,42,0,19
+1786049015631,284,GET Random File,200,OK,Capacity Test - Thread Group 1-33,,true,,2342154,144,47,47,http://192.168.64.3/files/file_extra_9_2287KB.dat,45,0,0
+1786049007793,8649,GET Random File,200,OK,Capacity Test - Thread Group 1-45,,true,,4607242,145,46,46,http://192.168.64.3/files/file_extra_11_4499KB.dat,28,0,0
+1786049016443,35,GET Random File,404,Not Found,Capacity Test - Thread Group 1-45,text,false,,490,123,46,46,http://192.168.64.3/filepath,35,0,0
+1786049007443,9218,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,52429068,134,45,45,http://192.168.64.3/files/file_50MB.dat,28,0,0
+1786049016663,157,GET Random File,200,OK,Capacity Test - Thread Group 1-7,,true,,1048842,133,45,45,http://192.168.64.3/files/file_1MB.dat,42,0,0
+1786049016929,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-8,text,false,,2069,0,44,44,http://192.168.64.3/files/file_extra_7_5838KB.dat,0,0,0
+1786049001282,15671,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,8923403,144,43,43,http://192.168.64.3/files/file_extra_5_8714KB.dat,47,0,27
+1786049014659,2315,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,1048843,133,43,43,http://192.168.64.3/files/file_1MB.dat,69,0,37
+1786049017168,1,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-6,text,false,,2069,0,43,43,http://192.168.64.3/files/file_extra_13_10513KB.dat,0,0,0
+1786049000191,17189,GET Random File,200,OK,Capacity Test - Thread Group 1-23,,true,,8923403,144,42,42,http://192.168.64.3/files/file_extra_5_8714KB.dat,207,0,28
+1786048991389,26080,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,11538700,146,42,42,http://192.168.64.3/files/file_extra_10_11268KB.dat,205,0,21
+1786049005379,12201,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,5978378,144,42,42,http://192.168.64.3/files/file_extra_7_5838KB.dat,24,0,0
+1786049015030,2860,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,1362186,144,42,42,http://192.168.64.3/files/file_extra_1_1330KB.dat,25,0,0
+1786049017369,938,GET Random File,200,OK,Capacity Test - Thread Group 1-13,,true,,11652363,146,42,42,http://192.168.64.3/files/file_extra_14_11379KB.dat,28,0,0
+1786049010979,8116,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,12830987,145,41,41,http://192.168.64.3/files/file_extra_4_12530KB.dat,20,0,0
+1786049008082,11468,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,5978378,144,41,41,http://192.168.64.3/files/file_extra_7_5838KB.dat,22,0,0
+1786049019593,19,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-17,text,false,,2069,0,41,41,http://192.168.64.3/files/file_100KB.dat,0,0,0
+1786049019618,71,GET Random File,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: 192.168.64.3:80 failed to respond,Capacity Test - Thread Group 1-46,text,false,,2069,0,40,40,http://192.168.64.3/files/file_1MB.dat,0,0,0
+1786049019595,442,GET Random File,200,OK,Capacity Test - Thread Group 1-2,,true,,1285,133,39,39,http://192.168.64.3/files/file_1KB.dat,442,0,249
+1786049014996,5356,GET Random File,200,OK,Capacity Test - Thread Group 1-50,,true,,52429068,134,38,38,http://192.168.64.3/files/file_50MB.dat,37,0,0
+1786049018263,2504,GET Random File,200,OK,Capacity Test - Thread Group 1-35,,true,,8654090,145,37,37,http://192.168.64.3/files/file_extra_15_8451KB.dat,28,0,0
+1786049009915,11702,GET Random File,200,OK,Capacity Test - Thread Group 1-14,,true,,11538700,146,36,36,http://192.168.64.3/files/file_extra_10_11268KB.dat,140,0,119
+1786048992184,29751,GET Random File,200,OK,Capacity Test - Thread Group 1-24,,true,,12830988,145,35,35,http://192.168.64.3/files/file_extra_4_12530KB.dat,352,0,134
+1786048998314,24057,GET Random File,200,OK,Capacity Test - Thread Group 1-39,,true,,11538700,146,34,34,http://192.168.64.3/files/file_extra_10_11268KB.dat,80,0,32
+1786049011630,10879,GET Random File,200,OK,Capacity Test - Thread Group 1-10,,true,,5998859,144,33,33,http://192.168.64.3/files/file_extra_3_5858KB.dat,47,0,20
+1786049005181,17776,GET Random File,200,OK,Capacity Test - Thread Group 1-18,,true,,8654090,145,32,32,http://192.168.64.3/files/file_extra_15_8451KB.dat,32,0,0
+1786049017503,5551,GET Random File,200,OK,Capacity Test - Thread Group 1-47,,true,,3247371,144,31,31,http://192.168.64.3/files/file_extra_8_3171KB.dat,74,0,40
+1786049017866,5196,GET Random File,200,OK,Capacity Test - Thread Group 1-16,,true,,2342155,144,30,30,http://192.168.64.3/files/file_extra_9_2287KB.dat,46,0,25
+1786049013410,10104,GET Random File,200,OK,Capacity Test - Thread Group 1-32,,true,,4607242,145,29,29,http://192.168.64.3/files/file_extra_11_4499KB.dat,26,0,0
+1786049017470,6281,GET Random File,200,OK,Capacity Test - Thread Group 1-43,,true,,3247370,144,28,28,http://192.168.64.3/files/file_extra_8_3171KB.dat,28,0,0
+1786049011450,12489,GET Random File,200,OK,Capacity Test - Thread Group 1-19,,true,,5796106,144,27,27,http://192.168.64.3/files/file_extra_2_5660KB.dat,25,0,0
+1786049017582,6489,GET Random File,200,OK,Capacity Test - Thread Group 1-34,,true,,2342154,144,26,26,http://192.168.64.3/files/file_extra_9_2287KB.dat,30,0,0
+1786049008780,15704,GET Random File,200,OK,Capacity Test - Thread Group 1-11,,true,,8923403,144,25,25,http://192.168.64.3/files/file_extra_5_8714KB.dat,146,0,118
+1786049002243,22666,GET Random File,200,OK,Capacity Test - Thread Group 1-42,,true,,11652363,146,24,24,http://192.168.64.3/files/file_extra_14_11379KB.dat,27,0,0
+1786049013389,11551,GET Random File,200,OK,Capacity Test - Thread Group 1-36,,true,,5998858,144,23,23,http://192.168.64.3/files/file_extra_3_5858KB.dat,35,0,0
+1786049015309,9736,GET Random File,200,OK,Capacity Test - Thread Group 1-3,,true,,12830987,145,22,22,http://192.168.64.3/files/file_extra_4_12530KB.dat,30,0,0
+1786049010150,15384,GET Random File,200,OK,Capacity Test - Thread Group 1-49,,true,,10765580,146,21,21,http://192.168.64.3/files/file_extra_13_10513KB.dat,55,0,21
+1786049019096,6567,GET Random File,200,OK,Capacity Test - Thread Group 1-12,,true,,10765579,146,20,20,http://192.168.64.3/files/file_extra_13_10513KB.dat,284,0,0
+1786049016955,9067,GET Random File,200,OK,Capacity Test - Thread Group 1-27,,true,,5998858,144,19,19,http://192.168.64.3/files/file_extra_3_5858KB.dat,188,0,0
+1786049011100,15148,GET Random File,200,OK,Capacity Test - Thread Group 1-44,,true,,8923402,144,18,18,http://192.168.64.3/files/file_extra_5_8714KB.dat,22,0,0
+1786049016357,9933,GET Random File,200,OK,Capacity Test - Thread Group 1-48,,true,,10040587,145,17,17,http://192.168.64.3/files/file_extra_12_9805KB.dat,37,0,0
+1786049008508,17837,GET Random File,200,OK,Capacity Test - Thread Group 1-21,,true,,11652363,146,16,16,http://192.168.64.3/files/file_extra_14_11379KB.dat,34,0,0
+1786049017382,9408,GET Random File,200,OK,Capacity Test - Thread Group 1-23,,true,,5978378,144,15,15,http://192.168.64.3/files/file_extra_7_5838KB.dat,189,0,0
+1786049009715,17394,GET Random File,200,OK,Capacity Test - Thread Group 1-37,,true,,12830987,145,14,14,http://192.168.64.3/files/file_extra_4_12530KB.dat,23,0,0
+1786049015910,11675,GET Random File,200,OK,Capacity Test - Thread Group 1-31,,true,,10765579,146,13,13,http://192.168.64.3/files/file_extra_13_10513KB.dat,30,0,0
+1786049019232,8394,GET Random File,200,OK,Capacity Test - Thread Group 1-40,,true,,11538699,146,12,12,http://192.168.64.3/files/file_extra_10_11268KB.dat,423,0,0
+1786049008529,19151,GET Random File,200,OK,Capacity Test - Thread Group 1-26,,true,,12830988,145,11,11,http://192.168.64.3/files/file_extra_4_12530KB.dat,54,0,27
+1786049018135,9850,GET Random File,200,OK,Capacity Test - Thread Group 1-5,,true,,11538700,146,10,10,http://192.168.64.3/files/file_extra_10_11268KB.dat,149,0,122
+1786049015447,12545,GET Random File,200,OK,Capacity Test - Thread Group 1-9,,true,,8923402,144,9,9,http://192.168.64.3/files/file_extra_5_8714KB.dat,20,0,0
+1786049015843,12432,GET Random File,200,OK,Capacity Test - Thread Group 1-22,,true,,10040587,145,8,8,http://192.168.64.3/files/file_extra_12_9805KB.dat,33,0,0
+1786049019551,8852,GET Random File,200,OK,Capacity Test - Thread Group 1-25,,true,,11652363,146,7,7,http://192.168.64.3/files/file_extra_14_11379KB.dat,278,0,0
+1786049018958,9542,GET Random File,200,OK,Capacity Test - Thread Group 1-41,,true,,12830987,145,6,6,http://192.168.64.3/files/file_extra_4_12530KB.dat,137,0,0
+1786048994733,35575,GET Random File,200,OK,Capacity Test - Thread Group 1-30,,true,,52429069,134,5,5,http://192.168.64.3/files/file_50MB.dat,55,0,29
+1786048991504,39404,GET Random File,200,OK,Capacity Test - Thread Group 1-1,,true,,52429068,134,4,4,http://192.168.64.3/files/file_50MB.dat,35,0,0
+1786049006517,24683,GET Random File,200,OK,Capacity Test - Thread Group 1-29,,true,,104857869,135,3,3,http://192.168.64.3/files/file_100MB.dat,37,0,0
+1786048985147,46404,GET Random File,200,OK,Capacity Test - Thread Group 1-4,,true,,104857870,135,2,2,http://192.168.64.3/files/file_100MB.dat,180,0,143
+1786049014843,16860,GET Random File,200,OK,Capacity Test - Thread Group 1-20,,true,,104857869,135,1,1,http://192.168.64.3/files/file_100MB.dat,22,0,0
