@@ -43,3 +43,6 @@ Docs/
 
 # OS
 Thumbs.db
+
+#Others
+*.csv
