@@ -12,28 +12,44 @@
  * copyright 2026
 """
 
+import argparse
 from pathlib import Path
+
 from analysis.clean import load_dataset, clean_report
 
-RAMP_UP_ROWS = 32
-COOLDOWN_ROWS = 23
-
-def trim_edges(df, ramp_up, cooldown):
+def trim_edges(df, ramp_up: int, cooldown: int) -> list[int]:
     return list(range(ramp_up)) + list(range(len(df) - cooldown, len(df)))
 
-#LL Global
-df = load_dataset(Path("data/raw/ll_global.csv"))
-row_to_drop = trim_edges(df, RAMP_UP_ROWS, COOLDOWN_ROWS)
-cleaned = clean_report(df, columns_to_drop=["mem_total"], rows_to_drop=row_to_drop)
-cleaned.to_csv("data/processed/ll_global_clean.csv", index=False)
+def apply_cleaning(
+    input_path: Path,
+    output_path: Path,
+    columns_to_drop: list[str],
+    ramp_up: int = 0,
+    cooldown: int = 0,
+):
+    df = load_dataset(input_path)
+    rows_to_drop = trim_edges(df, ramp_up, cooldown) if (ramp_up or cooldown) else None
 
-#LL process
-df = load_dataset(Path("data/raw/ll_process.csv"))
-row_to_drop = trim_edges(df, RAMP_UP_ROWS, COOLDOWN_ROWS)
-cleaned = clean_report(df, columns_to_drop=["pid", "proc_io_read_bytes", "proc_io_write_bytes"], rows_to_drop=row_to_drop)
-cleaned.to_csv("data/processed/ll_process_clean.csv", index=False)
+    cleaned = clean_report(df, columns_to_drop=columns_to_drop, rows_to_drop=rows_to_drop)
 
-#HL Report
-df = load_dataset(Path("data/raw/hl_report.csv"))
-cleaned = clean_report(df, columns_to_drop=["responseCode", "success", "URL"])
-cleaned.to_csv("data/processed/hl_report_clean.csv", index=False)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    cleaned.to_csv(output_path, index=False)
+    print(f"Saved: {output_path} — shape {cleaned.shape} (from {df.shape})")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Apply cleaning decisions to a raw dataset")
+    parser.add_argument("--input", type=Path, required=True)
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--drop-columns", nargs="*", default=[])
+    parser.add_argument("--ramp-up", type=int, default=0, help="Starting rows to drop.")
+    parser.add_argument("--cooldown", type=int, default=0, help="Ending row to drop.")
+
+    args = parser.parse_args()
+    apply_cleaning(
+        input_path=args.input,
+        output_path=args.output,
+        columns_to_drop=args.drop_columns,
+        ramp_up=args.ramp_up,
+        cooldown=args.cooldown,
+    )

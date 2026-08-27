@@ -108,10 +108,10 @@ def writer_loop(result_queue: Queue, output_path: Path, stop_event: threading.Ev
 
 def run_load_test(base_url: str, manifest_path: Path, num_threads: int,
                   duration_seconds: int, ramp_up_seconds: int, output_path: Path,
-                  tier_weights: dict, think_time: float
+                  tier_weights: dict, think_time: float, manifest_type: str
                   ):
 
-    if args.manifest_type == "tier":
+    if manifest_type == "tier":
         resources = load_manifest(args.manifest)
         pool = build_weighted_pool(resources, DEFAULT_TIER_WEIGHTS)
     else:  # synthetic
@@ -157,7 +157,7 @@ def load_synthetic_manifest(csv_path: Path) -> list[dict]:
             resources.append({
                 "filename": row["resource"],
                 "tier": "synthetic",
-                "weight_ovveride": int(row["weight"]),
+                "weight_override": int(row["weight"]),
             })
 
     return resources
@@ -165,7 +165,7 @@ def load_synthetic_manifest(csv_path: Path) -> list[dict]:
 def build_weighted_pool_from_synthetic(resources: list[dict]) -> list:
     pool = []
     for r in resources:
-        weight = r["weight_ovveride"]
+        weight = r["weight_override"]
         pool.extend([r]*weight)
 
     return pool
@@ -195,6 +195,7 @@ if __name__ == "__main__":
         output_path=args.output,
         tier_weights=DEFAULT_TIER_WEIGHTS,
         think_time=args.think_time,
+        manifest_type=args.manifest_type
     )
 
     print("Load test completed.")

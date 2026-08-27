@@ -10,8 +10,37 @@ import subprocess
 import sys
 import time 
 import requests
+import threading
 
 from pathlib import Path
+
+def progess_monitor(duration_seconds: int, check_interval: int = 30, stop_event: threading.Event = None, 
+                    drift_threshold: float = 5.0):
+    start = time.monotonic()
+    last_check = start
+
+    while not (stop_event and stop_event.is_set()):
+        time.sleep(check_interval)
+        now = time.monotonic()
+
+        actual_gap = now - last_check
+        expected_gap = check_interval
+        drift = actual_gap - expected_gap
+
+        elapsed_total = now - start
+        remaining = max(0, duration_seconds - elapsed_total)
+        pct = min(100, elapsed_total / duration_seconds * 100)
+
+        status = f"[PROGRESS] {pct:5.1f}% - elapsed: {elapsed_total/60:.1f} min, {remaining/60:.1f} min"
+
+        if drift > drift_threshold:
+            status += f"WARNING: drift releveted: {drift:.1f}s (possible system sleep/suspension)."
+
+        print(status)
+        last_check = now
+
+        if elapsed_total >= duration_seconds:
+            break
 
 def check_server_alive(base_url: str, timeout: int = 10) -> bool:
     start = time.time()
@@ -28,7 +57,7 @@ def check_server_alive(base_url: str, timeout: int = 10) -> bool:
 def run_full_workload(base_url: str, duration: int, threads: int,
                      ramp_up: int, interval: float, target_process: str,
                      hl_output: Path, ll_global_output: Path, ll_process_output: Path,
-                     manifest_path: Path, manifest_type: str):
+                     manifest_path: Path, manifest_type: str, think_time: float):
     print("Checking server availability...")
     if not check_server_alive(base_url):
         print(f"ERROR: server not reachable at {base_url}. Start it first.")
@@ -55,6 +84,7 @@ def run_full_workload(base_url: str, duration: int, threads: int,
         "--output", str(hl_output),
         "--manifest", str(manifest_path),
         "--manifest-type", manifest_type,
+        "--think-time", str(think_time),
     ]
 
     print(f"Workload type: {manifest_type} (manifest: {manifest_path})")
@@ -66,7 +96,16 @@ def run_full_workload(base_url: str, duration: int, threads: int,
     print("Starting load generator...")
     load_gen_proc = subprocess.Popen(load_gen_cmd)
 
+    stop_monitor = threading.Event()
+    monitor_thread = threading.Thread(
+        target=progess_monitor,
+        args=(duration, 30, stop_monitor),
+        daemon=True,
+    )
+    monitor_thread.start()
+
     load_gen_proc.wait()
+    stop_monitor.set()
     print("Load generator finished.")
 
     collector_proc.wait()
@@ -85,6 +124,7 @@ if __name__ == "__main__":
     parser.add_argument("--ramp-up", type=int, default=15)
     parser.add_argument("--interval", type=float, default=1.0)
     parser.add_argument("--target-process", type=str, default="uvicorn")
+    parser.add_argument("--think-time", type=float, default=0.0)
 
     parser.add_argument("--hl-output", type=Path, default=Path("data/raw/hl_report.csv"))
     parser.add_argument("--ll-global-output", type=Path, default=Path("data/raw/ll_global.csv"))
@@ -109,5 +149,6 @@ if __name__ == "__main__":
         ll_global_output=args.ll_global_output,
         ll_process_output=args.ll_process_output,
         manifest_type=args.manifest_type, 
-        manifest_path=args.manifest
+        manifest_path=args.manifest,
+        think_time=args.think_time
     )
