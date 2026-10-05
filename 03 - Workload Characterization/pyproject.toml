@@ -1,0 +1,22 @@
+[project]
+name = "workload"
+version = "0.1.0"
+description = "Workload Characterization"
+authors = [
+    {name = "antsiri",email = "antoniosirignano@outlook.it"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "locust (>=2.46.6,<3.0.0)",
+    "pandas (>=3.0.6,<4.0.0)",
+    "matplotlib (>=3.11.2,<4.0.0)",
+    "scipy (>=1.18.1,<2.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
