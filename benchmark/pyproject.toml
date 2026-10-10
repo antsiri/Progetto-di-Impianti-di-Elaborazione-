@@ -1,0 +1,25 @@
+[project]
+name = "benchmark"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "antsiri",email = "antoniosirignano@outlook.it"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numba (==0.62.1)",
+    "llvmlite (==0.45.1)",
+    "numpy (<2.4)",
+    "pandas (>=3.0.6,<4.0.0)",
+    "scipy (>=1.18.1,<2.0.0)",
+    "matplotlib (>=3.11.2,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)"
+]
+
+[tool.poetry]
+packages = [{include = "benchmark", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
