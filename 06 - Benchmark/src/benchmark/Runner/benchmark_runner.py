@@ -14,7 +14,7 @@ from pathlib import Path
 class BenchmarkRunner:
     def __init__(self, device_label: str, body_sizes: List[int] = None, n_runs: int = 31, steps: int = 5):
         self.device_label = device_label
-        self.body_sizes = body_sizes or [10000, 100000, 1000000]
+        self.body_sizes = body_sizes or [10000, 100000, 500000]
         self.n_runs = n_runs
         self.steps = steps
 
@@ -23,7 +23,7 @@ class BenchmarkRunner:
         times = []
 
         for i in range(1, self.n_runs + 1):
-            cmd = [sys.executable, 'nbody_simulator.py', str(self.steps), str(n_bodies)]
+            cmd = [sys.executable, '/Users/antoniosirignano/Desktop/Progetto Impianti di Elaborazione/benchmark/src/benchmark/Nbody/nbody_simulator.py', str(self.steps), str(n_bodies)]
             result = subprocess.run(cmd, capture_output=True, text=True, check=True)
             t_ms = float(result.stdout.strip())
             times.append(t_ms)
@@ -54,4 +54,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     runner = BenchmarkRunner(device_label=sys.argv[1])
-    runner.execute_all()
+    runner.execute()

@@ -15,8 +15,6 @@ from typing import Dict, Tuple
 
 
 class SampleDataset:
-    """Classe che rappresenta e analizza un singolo campione di misurazioni."""
-
     def __init__(self, device: str, n_bodies: int, filepath: str = None):
         self.device = device
         self.n_bodies = n_bodies
@@ -121,12 +119,12 @@ class BenchmarkVisualizer:
         if save_path:
             plt.savefig(save_path)
             print(f"[VISUALIZER] Graph saved in: {save_path}")
-        plt.show()
+        plt.close()
 
 
 class BenchmarkPipelineManager:
     def __init__(self, body_sizes=None):
-        self.body_sizes = body_sizes or [10000, 100000, 1000000]
+        self.body_sizes = body_sizes or [10000, 100000]
 
     def run_full_analysis(self):
         for n_bodies in self.body_sizes:
@@ -153,7 +151,7 @@ class BenchmarkPipelineManager:
             print("\n--- TEST DI NORMALITÀ (Shapiro-Wilk) ---")
             for ds in [laptop_ds, desktop_ds]:
                 w, p, norm = ds.test_normality()
-                status = "NORMALE" if norm else "NON NORMALE"
+                status = "NORMAL" if norm else "NOT NORMAL"
                 print(f"{ds.device.capitalize()}: W={w:.4f}, p-value={p:.4f} -> {status}")
 
             analyzer = StatisticalAnalyzer(laptop_ds, desktop_ds)
@@ -167,7 +165,7 @@ class BenchmarkPipelineManager:
                 print(f"{test_name}: Stat={stat:.4f}, p-value={p_val:.4e}")
 
             BenchmarkVisualizer.plot_comparison(
-                laptop_ds, desktop_ds, save_path=f"confronto_{n_bodies}.png"
+                laptop_ds, desktop_ds, save_path=f"comparison_{n_bodies}.png"
             )
 
 
