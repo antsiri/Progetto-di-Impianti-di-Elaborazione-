@@ -46,3 +46,6 @@ Thumbs.db
 
 #Others
 *.csv
+
+# graphify
+graphify-out/

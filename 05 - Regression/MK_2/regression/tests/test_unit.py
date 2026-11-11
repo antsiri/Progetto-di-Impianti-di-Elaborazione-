@@ -55,6 +55,6 @@ def test_failure_time():
 
 
 def test_failure_range_ordered():
-    r = {"sheet": "VMresX", "ts_intercpt": 0.0, "ts_slope": 1.0, "ts_ic_inf": 0.5, "ts_ic_sup": 2.0}
+    r = {"sheet": "VMresX", "ts_intercept": 0.0, "ts_slope": 1.0, "ts_ic_inf": 0.5, "ts_ic_sup": 2.0}
     f = failure_prediction(r, limit=100)
     assert f["T_min_s"] == 50 and f["T_failure_s"] == 100 and f["T_max_s"] == 200
