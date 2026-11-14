@@ -3,6 +3,11 @@
  * created on 10-10-2026-17h-24m
  * github: https://github.com/antsiri
  * copyright 2026
+
+Statistical comparison of the N-body benchmark between two machines
+(laptop vs desktop): descriptive statistics, confidence intervals, required
+sample size, normality and homoscedasticity tests, Welch t-test and
+Wilcoxon rank-sum test, plus comparison plots.
 """
 
 # analysis.py
@@ -15,37 +20,66 @@ from typing import Dict, Tuple
 
 
 class SampleDataset:
+    """
+    Sample of execution times (ms) of one device for one problem size.
+
+    Attributes:
+        device (str): device label (``laptop`` / ``desktop``).
+        n_bodies (int): number of simulated bodies.
+        filepath (str): data file (one time per line).
+        data (np.ndarray): loaded execution times.
+    """
+
     def __init__(self, device: str, n_bodies: int, filepath: str = None):
+        """
+        Args:
+            device (str): device label.
+            n_bodies (int): number of bodies.
+            filepath (str | None): data file; default ``benchmark_<device>_<n_bodies>.txt``.
+        """
         self.device = device
         self.n_bodies = n_bodies
         self.filepath = filepath or f"benchmark_{device}_{n_bodies}.txt"
         self.data = self._load_data()
 
     def _load_data(self) -> np.ndarray:
+        """Load the times from the text file (one value per line)."""
         return np.loadtxt(self.filepath)
 
     @property
     def n(self) -> int:
+        """Sample size."""
         return len(self.data)
 
     @property
     def mean(self) -> float:
+        """Sample mean."""
         return float(np.mean(self.data))
 
     @property
     def std(self) -> float:
+        """Sample standard deviation (ddof=1, unbiased)."""
         return float(np.std(self.data, ddof=1))
 
     @property
     def se(self) -> float:
+        """Standard error of the mean: s / sqrt(n)."""
         return self.std / np.sqrt(self.n)
 
     @property
     def confidence_interval_95(self) -> Tuple[float, float]:
+        """95% confidence interval of the mean (Student t, n-1 dof)."""
         return stats.t.interval(0.95, df=self.n - 1, loc=self.mean, scale=self.se)
 
     def get_summary_stats(self) -> Dict[str, float]:
+        """
+        Descriptive statistics of the sample.
+
+        Returns:
+            dict[str, float]: N, mean, std, SE, 95% CI bounds and five-number summary.
+        """
         ci_low, ci_high = self.confidence_interval_95
+        # Minimum, quartiles and maximum
         quantiles = np.percentile(self.data, [0, 25, 50, 75, 100])
         return {
             'N': self.n,
@@ -62,28 +96,74 @@ class SampleDataset:
         }
 
     def estimate_required_sample_size(self, error_percentage: float, z: float = 1.96) -> int:
+        """
+        Number of runs needed to estimate the mean within a relative error.
+
+        Formula: ``n = (z * s / E)^2`` with ``E = mean * error_percentage``.
+
+        Args:
+            error_percentage (float): accepted relative error (e.g. 0.05 = 5%).
+            z (float): normal quantile (1.96 -> 95% confidence).
+
+        Returns:
+            int: required sample size (rounded up).
+        """
+        # Absolute accepted error
         E = self.mean * error_percentage
         n_req = ((z * self.std) / E) ** 2
         return int(np.ceil(n_req))
 
     def test_normality(self) -> Tuple[float, float, bool]:
+        """
+        Shapiro-Wilk normality test.
+
+        Returns:
+            tuple[float, float, bool]: statistic W, p-value, True if normal (p > 0.05).
+        """
         w_stat, p_val = stats.shapiro(self.data)
         is_normal = p_val > 0.05
         return w_stat, p_val, is_normal
 
 
 class StatisticalAnalyzer:
+    """
+    Two-sample comparison tests.
+
+    Attributes:
+        s1 (SampleDataset): first sample.
+        s2 (SampleDataset): second sample.
+    """
+
     def __init__(self, sample1: SampleDataset, sample2: SampleDataset):
+        """
+        Args:
+            sample1 (SampleDataset): first sample.
+            sample2 (SampleDataset): second sample.
+        """
         self.s1 = sample1
         self.s2 = sample2
 
     def test_homoscedasticity(self) -> Tuple[float, float, bool]:
+        """
+        Brown-Forsythe test (Levene centred on the median) for equal variances.
+
+        Returns:
+            tuple[float, float, bool]: statistic F, p-value, True if variances are equal.
+        """
         f_stat, p_val = stats.levene(self.s1.data, self.s2.data, center='median')
         is_homoscedastic = p_val > 0.05
         return f_stat, p_val, is_homoscedastic
 
     def run_comparison_tests(self) -> Dict[str, Tuple[float, float]]:
+        """
+        Compare the two samples with a parametric and a non-parametric test.
+
+        Returns:
+            dict[str, tuple[float, float]]: test name -> (statistic, p-value).
+        """
+        # Welch t-test: does not assume equal variances
         t_stat, p_welch = stats.ttest_ind(self.s1.data, self.s2.data, equal_var=False)
+        # Wilcoxon rank-sum: does not assume normality
         w_stat, p_wilcoxon = stats.ranksums(self.s1.data, self.s2.data)
 
         return {
@@ -93,16 +173,28 @@ class StatisticalAnalyzer:
 
 
 class BenchmarkVisualizer:
+    """Plotting helpers for the benchmark comparison."""
+
     @staticmethod
     def plot_comparison(sample1: SampleDataset, sample2: SampleDataset, save_path: str = None):
+        """
+        Draw side-by-side boxplots and the 95% confidence intervals of the means.
+
+        Args:
+            sample1 (SampleDataset): first sample.
+            sample2 (SampleDataset): second sample.
+            save_path (str | None): if given, the figure is saved there.
+        """
         sns.set_theme(style="whitegrid")
         fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
+        # Left: distribution of the execution times
         sns.boxplot(data=[sample1.data, sample2.data], ax=axes[0], palette="Set2")
         axes[0].set_xticklabels([sample1.device.capitalize(), sample2.device.capitalize()])
         axes[0].set_ylabel('Execution Time (ms)')
         axes[0].set_title(f'Comparative Boxplot (N={sample1.n_bodies})')
 
+        # Right: mean with error bar = half-width of the 95% CI
         means = [sample1.mean, sample2.mean]
         errors = [
             sample1.mean - sample1.confidence_interval_95[0],
@@ -123,10 +215,22 @@ class BenchmarkVisualizer:
 
 
 class BenchmarkPipelineManager:
+    """
+    Runs the full statistical analysis for each problem size.
+
+    Attributes:
+        body_sizes (list[int]): problem sizes to analyse.
+    """
+
     def __init__(self, body_sizes=None):
+        """
+        Args:
+            body_sizes (list[int] | None): problem sizes (default [10000, 100000]).
+        """
         self.body_sizes = body_sizes or [10000, 100000]
 
     def run_full_analysis(self):
+        """Print every statistic/test and save ``comparison_<N>.png`` for each size."""
         for n_bodies in self.body_sizes:
             print(f"\n==================================================")
             print(f"STATISTICAL ANALYSIS WITH N = {n_bodies} BODIES")
@@ -135,6 +239,7 @@ class BenchmarkPipelineManager:
             laptop_ds = SampleDataset(device='laptop', n_bodies=n_bodies)
             desktop_ds = SampleDataset(device='desktop', n_bodies=n_bodies)
 
+            # 1. Descriptive statistics side by side
             df_stats = pd.DataFrame({
                 'Laptop': laptop_ds.get_summary_stats(),
                 'Desktop': desktop_ds.get_summary_stats()
@@ -142,23 +247,27 @@ class BenchmarkPipelineManager:
             print("\n--- SUMMARY STATISTICS ---")
             print(df_stats.round(2))
 
+            # 2. Required sample size for 5%, 8% and 10% relative error
             print("\n--- ESTIMATE OF THE THEORETICAL SAMPLE SIZE (n) ---")
             for err in [0.05, 0.08, 0.10]:
                 n_lap = laptop_ds.estimate_required_sample_size(err)
                 n_desk = desktop_ds.estimate_required_sample_size(err)
                 print(f"Errore {int(err*100)}%: Laptop n={n_lap}, Desktop n={n_desk}")
 
+            # 3. Normality of each sample
             print("\n--- TEST DI NORMALITÀ (Shapiro-Wilk) ---")
             for ds in [laptop_ds, desktop_ds]:
                 w, p, norm = ds.test_normality()
                 status = "NORMAL" if norm else "NOT NORMAL"
                 print(f"{ds.device.capitalize()}: W={w:.4f}, p-value={p:.4f} -> {status}")
 
+            # 4. Equality of variances
             analyzer = StatisticalAnalyzer(laptop_ds, desktop_ds)
             f_stat, p_homo, is_homo = analyzer.test_homoscedasticity()
             print("\n--- TEST FOR HOMOSCEDASTICITY (Brown-Forsythe) ---")
             print(f"F={f_stat:.4f}, p-value={p_homo:.4e} -> {'HOMOSCEDASTICITY' if is_homo else 'HETEROSCEDASTIC'}")
 
+            # 5. Comparison of the two devices
             print("\n--- COMPARATIVE STATISTICAL TESTS ---")
             results = analyzer.run_comparison_tests()
             for test_name, (stat, p_val) in results.items():

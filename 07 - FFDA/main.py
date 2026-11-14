@@ -1,8 +1,20 @@
+"""
+Field Failure Data Analysis (FFDA) pipeline on the Mercury syslog.
+
+Steps:
+    1. generate a synthetic Mercury-like log if none exists;
+    2. parse the log into LogEntry objects;
+    3. CWIN sensitivity analysis of the tupling (coalescence) algorithm;
+    4. tupling with the chosen CWIN and computation of the times to failure;
+    5. empirical reliability and hyperexponential fit;
+    6. MTTF estimation and plots.
+"""
+
 import time
 from pathlib import Path
 import numpy as np
 
-# Import dai moduli del progetto
+# Imports from the project modules
 from ffda.Logger.mercurylogger import MercuryLogParser
 from ffda.ColescenceEngine.colescence import CoalescenceEngine
 from ffda.Reliability.reliability import ReliabilityAnalyzer
@@ -11,35 +23,51 @@ from ffda.Monitor.monitor import FileTailMonitor, LogFilterEngine
 
 
 def generate_sample_syslog(output_file: Path, num_episodes: int = 500):
+    """
+    Generate a synthetic Mercury-like failure log.
+
+    Each episode is a burst of error lines very close in time (as happens
+    in real failures, which produce many correlated messages); episodes are
+    separated by exponential inter-arrival times drawn from a mixture of a
+    short-scale and a long-scale exponential (hyperexponential behaviour).
+
+    Args:
+        output_file (Path): destination log file.
+        num_episodes (int): number of failure episodes.
+    """
     print(f"[*] File {output_file} not found.")
     print(f"[*] Generation of {num_episodes} episods...")
-    
+
     categories = ["DEV", "MEM", "I-O", "NET", "PRO", "OTH"]
     nodes = ["tg-c401", "tg-master", "tg-c572", "tg-s044", "tg-c238"]
-    
+
     current_time = 1000.0
-    
+
     with open(output_file, "w", encoding="utf-8") as f:
         for _ in range(num_episodes):
+            # Mixture of two exponentials -> hyperexponential time to failure
             if np.random.rand() < 0.4:
-                ttf = np.random.exponential(scale=1000)   # TTF brevi (> CWIN)
+                ttf = np.random.exponential(scale=1000)   # short TTF (> CWIN)
             else:
-                ttf = np.random.exponential(scale=10000)  # TTF lunghi
-            
+                ttf = np.random.exponential(scale=10000)  # long TTF
+
             current_time += ttf
-            
+
+            # Burst size, node and category of the episode (skewed probabilities)
             burst_size = np.random.randint(50, 250)
             burst_node = np.random.choice(nodes, p=[0.75, 0.08, 0.07, 0.05, 0.05])
             burst_cat = np.random.choice(categories, p=[0.70, 0.16, 0.07, 0.04, 0.02, 0.01])
-            
+
             for _ in range(burst_size):
+                # Messages of the same burst are at most 1.5 s apart
                 delta_burst = np.random.uniform(0.01, 1.5)
                 current_time += delta_burst
-                
+
                 raw_line = f"FATAL ERROR on {burst_node}: {burst_cat} hardware failure"
                 formatted = LogFilterEngine.filter_and_format(raw_line, default_node=burst_node)
-                
+
                 if formatted:
+                    # Replace the real timestamp with the simulated one
                     parts = formatted.split()
                     parts[0] = f"{current_time:.0f}"
                     f.write(" ".join(parts) + "\n")
@@ -48,6 +76,10 @@ def generate_sample_syslog(output_file: Path, num_episodes: int = 500):
 
 
 def main():
+    """Run the whole FFDA pipeline."""
+    # ==========================================
+    # 1. LOG GENERATION (only if missing)
+    # ==========================================
     log_file = Path("mercury_syslog.log")
     if not log_file.exists():
         generate_sample_syslog(log_file, num_episodes=200000)
@@ -55,7 +87,7 @@ def main():
         print(f"[i] Log file '{log_file}' already exists. Monitor skipped.\n")
 
     # ==========================================
-    # 2. PARSING DEL LOG
+    # 2. LOG PARSING
     # ==========================================
     print(f"[*] Parsing lof file: {log_file}...")
     parser = MercuryLogParser(str(log_file))
@@ -67,40 +99,42 @@ def main():
         return
 
     # ==========================================
-    # 3. ANALISI DI SENSITIVITÀ CWIN
+    # 3. CWIN SENSITIVITY ANALYSIS
     # ==========================================
     print("[*] Execution CWIN Sensitivity Analysis ...")
     coalescer = CoalescenceEngine()
     cwin_range = [10, 30, 50, 75, 100, 150, 200, 230, 300, 500, 800]
+    # Number of tuples obtained for each candidate window
     sensitivity_dict = coalescer.sensitivity_analysis(entries, cwin_range)
 
-    # Salva il grafico della CWIN
+    # Save the CWIN plot (the "knee" of the curve guides the choice)
     ReliabilityVisualizer.plot_sensitivity(
-        sensitivity_dict, 
-        chosen_cwin=200, 
+        sensitivity_dict,
+        chosen_cwin=200,
         filename="cwin_sensitivity.png"
     )
     print("[✓] Plot CWIN saved in 'cwin_sensitivity.png'.")
 
     # ==========================================
-    # 4. TUPLING CON CWIN SELEZIONATA (200s)
+    # 4. TUPLING WITH THE SELECTED CWIN (200s)
     # ==========================================
     chosen_cwin = 200
     tuples = coalescer.tuple_logs(entries, cwin=chosen_cwin)
     print(f"[✓] Generated {len(tuples)} tuples with CWIN={chosen_cwin}s.")
 
+    # Time to failure = gap between the starts of consecutive tuples
     ttf_samples = coalescer.calculate_inter_arrival_times(tuples)
     if len(ttf_samples) < 2:
         print("[!] Sample TTF not enough for the fitting.")
         return
 
     # ==========================================
-    # 5. CALCOLO RELIABILITY EMPIRICA E FITTING
+    # 5. EMPIRICAL RELIABILITY AND FITTING
     # ==========================================
     analyzer = ReliabilityAnalyzer()
     t_vals, r_emp = analyzer.compute_empirical_reliability(ttf_samples)
 
-    # Fit Iper-esponenziale
+    # Hyperexponential fit
     hyp_fit = analyzer.fit_model("hyperexponential", t_vals, r_emp)
 
     print("\n--- RESULTS IPER-EXPONENTIAL REGREESSION ---")
@@ -109,16 +143,17 @@ def main():
     print(f"p-value (K-S Test): {hyp_fit['p_value']:.4f}")
 
     # ==========================================
-    # 6. CALCOLO MTTF ED ESPORTAZIONE GRAFICI
+    # 6. MTTF COMPUTATION AND PLOT EXPORT
     # ==========================================
+    # MTTF = integral of R(t) dt
     mttf = analyzer.calculate_mttf(hyp_fit["predict_func"])
     print(f"MTTF Stimato: {mttf:.2f} secondi ({mttf / 3600:.2f} ore)\n")
 
     ReliabilityVisualizer.plot_reliability_fit(
-        t_vals, 
-        r_emp, 
-        hyp_fit, 
-        title="Fit Plot - Hyperexponential", 
+        t_vals,
+        r_emp,
+        hyp_fit,
+        title="Fit Plot - Hyperexponential",
         filename="reliability_fit.png"
     )
     print("[✓] Plt Reliability saved in 'reliability_fit.png'.")

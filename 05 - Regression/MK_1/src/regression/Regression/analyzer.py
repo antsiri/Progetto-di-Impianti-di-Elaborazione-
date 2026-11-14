@@ -3,6 +3,8 @@
  * created on 09-10-2026-15h-19m
  * github: https://github.com/antsiri
  * copyright 2026
+
+Regression analysis for software aging (resource exhaustion trend).
 """
 
 import pandas as pd
@@ -10,8 +12,29 @@ import numpy as np
 
 from scipy.stats import kstest, kendalltau, norm, theilslopes
 
+
 class RegressionAnalyzer:
+    """
+    Trend analysis of a resource metric (``y_col``) over time (``x_col``).
+
+    Steps: OLS linear fit, KS normality test on residuals, Mann-Kendall
+    (Kendall tau) trend test, Theil-Sen robust slope estimation and
+    time-to-failure prediction for a given capacity limit.
+
+    Attributes:
+        data (pandas.DataFrame): loaded measurements.
+        x, y (np.ndarray): independent and dependent variables.
+        ols_res, normality_res, kendall_res, theil_sen_res, failure_res (dict):
+            results of each step.
+    """
+
     def __init__(self, csv_filepath: str, x_col: str, y_col: str):
+        """
+        Args:
+            csv_filepath (str): CSV with the measurements.
+            x_col (str): independent variable (e.g. ``TIME``).
+            y_col (str): dependent variable (e.g. ``RSS``).
+        """
         self.data = pd.read_csv(csv_filepath)
         self.x_col = x_col
         self.y_col = y_col
@@ -25,14 +48,18 @@ class RegressionAnalyzer:
         self.failure_res = {}
 
     def fit_ols(self):
+        """Least-squares linear fit ``y = intercept + slope * x``; stores R² and RMSE."""
+        # Degree-1 polynomial fit returns [slope, intercept]
         p = np.polyfit(self.x, self.y, 1)
         slope, intercept = p[0], p[1]
         y_pred = slope * self.x + intercept
         residuals = self.y - y_pred
 
+        # Coefficient of determination R² = 1 - SSE / SST
         ss_tot = np.sum((self.y - np.mean(self.y)) ** 2)
         ss_res = np.sum(residuals**2)
         r_squared = 1 - (ss_res / ss_tot) if ss_tot != 0 else 0
+        # RMSE with n - 2 degrees of freedom (two estimated parameters)
         rmse = (np.sqrt(ss_res / (len(self.x) - 2)) if len(self.x) > 2 else 0)
 
         self.ols_res = {
@@ -44,6 +71,10 @@ class RegressionAnalyzer:
         }
 
     def test_residual_normality(self):
+        """
+        Kolmogorov-Smirnov test of the standardised OLS residuals against
+        N(0, 1). Residuals are considered normal if p >= 0.01.
+        """
         residuals = self.ols_res["residuals"]
         std_residuals = (
             (residuals - np.mean(residuals)) / np.std(residuals, ddof=1)
@@ -58,6 +89,7 @@ class RegressionAnalyzer:
         }
 
     def test_kendall_trend(self):
+        """Mann-Kendall trend test via Kendall's tau (trend if p < 0.05)."""
         tau, p_val = kendalltau(self.x, self.y)
         self.kendall_res = {
             "tau": tau,
@@ -66,6 +98,10 @@ class RegressionAnalyzer:
         }
 
     def fit_theil_sen(self):
+        """
+        Theil-Sen robust estimator (median of pairwise slopes) with the 95%
+        confidence interval of the slope.
+        """
         res = theilslopes(self.y, self.x, alpha=0.95)
         self.theil_sen_res = {
             "slope": res.slope,
@@ -76,19 +112,33 @@ class RegressionAnalyzer:
         }
 
     def predict_failure(self, capacity_limit_bytes=1073741824):
+        """
+        Estimate the time at which the Theil-Sen line reaches the capacity
+        limit, with an uncertainty derived from the slope confidence interval.
+
+        Sets ``failure_res`` to None if the slope (or its bounds) is not
+        positive, i.e. there is no growing trend.
+
+        Args:
+            capacity_limit_bytes (float): resource limit (default 1 GiB).
+        """
         m = self.theil_sen_res["slope"]
         b = self.theil_sen_res["intercept"]
         low_m = self.theil_sen_res["low_slope"]
         high_m = self.theil_sen_res["high_slope"]
 
+        # No exhaustion can be predicted without a strictly positive trend
         if m <= 0 or high_m <= 0 or low_m <= 0:
             self.failure_res = None
             return
 
+        # Solve limit = b + m * t  ->  t = (limit - b) / m
         t_fail_sec = (capacity_limit_bytes - b) / m
+        # Steeper slope -> earlier failure; gentler slope -> later failure
         t_fail_low = (capacity_limit_bytes - b) / high_m
         t_fail_high = (capacity_limit_bytes - b) / low_m
 
+        # Half-width of the time-to-failure interval
         delta_sec = abs(t_fail_high - t_fail_low) / 2.0
         sec_per_year = 365.25 * 24 * 3600
 
@@ -100,12 +150,22 @@ class RegressionAnalyzer:
         }
 
     def run_analysis(self, capacity_limit_bytes=1073741824) -> str:
+        """
+        Run every analysis step and build a textual report.
+
+        Args:
+            capacity_limit_bytes (float): resource limit for the failure prediction.
+
+        Returns:
+            str: formatted report.
+        """
         self.fit_ols()
         self.test_residual_normality()
         self.test_kendall_trend()
         self.fit_theil_sen()
         self.predict_failure(capacity_limit_bytes)
 
+        # ---- Report construction ----
         report = f"\n======================================================\n"
         report += (
             f" REAL MEASURMENT ANALYSIS: {self.y_col} vs {self.x_col}\n"
@@ -131,6 +191,7 @@ class RegressionAnalyzer:
         report += f"   - Intercept (b): {self.theil_sen_res['intercept']:.3f}\n"
         report += f"   - CI 95%: [{self.theil_sen_res['low_slope']:.6f}, {self.theil_sen_res['high_slope']:.6f}]\n\n"
 
+        # Failure section only if a growing trend was found
         if self.failure_res:
             report += f"5. FAILURE PREDICTION (memory Saturation at 1 GB):\n"
             report += f"   - Time to Failure: {self.failure_res['t_fail_sec']:.0f} ± {self.failure_res['delta_sec']:.0f} s\n"

@@ -3,6 +3,9 @@
  * created on 31-10-2026-08h-58m
  * github: https://github.com/antsiri
  * copyright 2026
+
+Command-line interface: analyses every sheet/variable of the Excel file,
+saves plots and result tables and prints the failure predictions.
 """
 
 import argparse
@@ -16,10 +19,24 @@ from .data import load_data
 from .failure import failure_prediction
 from .plots import pair_plot
 
+
 def execute(path_xls: Path, output: Path, plots: bool = True) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Analyse all the series of the workbook.
+
+    Args:
+        path_xls (Path): input Excel file.
+        output (Path): output folder (``results.csv``, ``failure_prediction.csv``, ``figure/``).
+        plots (bool): whether to generate the diagnostic plots.
+
+    Returns:
+        tuple[pandas.DataFrame, pandas.DataFrame]: table of all analyses and
+        table of the failure predictions (may be empty).
+    """
     output.mkdir(parents=True, exist_ok=True)
     results, failure = [], []
-    
+
+    # One dataset per sheet, one analysis per dependent variable
     for sheet, ds in load_data(path_xls).items():
         print(f'\n=== {sheet} (n = {len(ds.df)}), X = {ds.x} ===')
         for y in ds.ys:
@@ -28,16 +45,17 @@ def execute(path_xls: Path, output: Path, plots: bool = True) -> tuple[pd.DataFr
             results.append(r)
             if plots:
                 pair_plot(ds.df, analysis, output / 'figure')
-            
+
             row = (f'   {y:<24} R2={r['R2']:.4f} KSL_D={r['KSL_D']:.4f} tau={r['kendall_tau']:+.4f} p={r['kendall_p']:.4f}')
-            
+
             if r['trend']:
                 row += (f'  | Theil-Sen m={r['ts_slope']:.3f} q={r['ts_intercept']:.3f} IC=[{r['ts_ic_inf']:.3f}, {r['ts_ic_sup']:.3f}]')
             else:
                 row += '    | no trend'
-            
+
             print(row)
 
+            # Failure prediction only for VM resource sheets showing a trend
             if sheet.startswith('VMRes') and r['trend']:
                 failure.append(failure_prediction(r))
 
@@ -50,13 +68,21 @@ def execute(path_xls: Path, output: Path, plots: bool = True) -> tuple[pd.DataFr
         print(' Failure Prediction (heap = 1GB) ===')
         for _, f in fp.iterrows():
             print(f"  {f['sheet']}: T = {f['T_failure_years']:.1f} years (IC: {f['T_min_years']:.1f} - {f['T_max_years']:.1f} years)")
+        # Best VM = the one with the largest pessimistic (minimum) time to failure
         best = fp.loc[fp["T_min_years"].idxmax(), "sheet"]
         print(f'    VM that maximize the failure time (IC worst case): {best}')
 
     print(f'\nSaved results in {output.resolve()}')
     return tab, fp
 
+
 def main(argv: list[str] | None = None) -> None:
+    """
+    Parse command-line arguments and run :func:`execute`.
+
+    Args:
+        argv (list[str] | None): arguments (None = ``sys.argv``).
+    """
     parser = argparse.ArgumentParser(description='HomeWork Regression')
     parser.add_argument('--data', type=Path, default=DEFAULT_DATA, help='Input file .xls')
     parser.add_argument('--output', type=Path, default=DEFAULT_OUTPUT, help='Output folder')
@@ -64,6 +90,7 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
 
     execute(args.data, args.output, plots=not args.no_plots)
+
 
 if __name__ == "__main__":
     main()

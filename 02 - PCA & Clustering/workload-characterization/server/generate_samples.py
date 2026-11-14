@@ -3,12 +3,19 @@
  * created on 18-08-2026-16h-41m
  * github: https://github.com/antsiri
  * copyright 2026
+
+Generate the sample files served by the test server.
+
+Creates random binary files of predefined sizes, grouped in size tiers, in
+``server/static`` and writes ``manifest.csv`` (filename, tier, size) used by
+the load generator to build the weighted request pool.
 """
 
 import os
 import random
 import csv
 
+# Size tiers: each tier lists (value, unit) pairs of the files to create
 RESOURCE_TIERS = {
     "low":       [(13.5, "KB"), (20, "KB"), (23.4, "KB"), (98, "KB"), (99.7, "KB")],
     "mid_low":   [(137, "KB"), (139, "KB"), (184, "KB"), (458, "KB"), (514, "KB")],
@@ -17,7 +24,21 @@ RESOURCE_TIERS = {
     "high":      [(9.21, "MB"), (9.38, "MB"), (9.58, "MB"), (10.1, "MB")],
 }
 
+
 def size_to_bytes(value, unit):
+    """
+    Convert a size expressed in B / KB / MB into bytes.
+
+    Args:
+        value (float): numeric size.
+        unit (str): ``"B"``, ``"KB"`` or ``"MB"`` (case-insensitive).
+
+    Returns:
+        int: size in bytes.
+
+    Raises:
+        ValueError: on an unsupported unit.
+    """
     units = {
         "B": 1,
         "KB": 1024,
@@ -30,7 +51,16 @@ def size_to_bytes(value, unit):
 
     return int(value * units[clean_unit])
 
+
 def generate_sample(path, size_bytes, chunk_size: int = 1024 * 1024) -> None:
+    """
+    Create a file of ``size_bytes`` random bytes, written in chunks.
+
+    Args:
+        path (str): destination file (parent folders are created).
+        size_bytes (int): file size.
+        chunk_size (int): bytes written per iteration (limits memory usage).
+    """
     dir_name = os.path.dirname(path)
     if dir_name:
         os.makedirs(dir_name, exist_ok=True)
@@ -39,14 +69,23 @@ def generate_sample(path, size_bytes, chunk_size: int = 1024 * 1024) -> None:
 
     with open(path, "wb") as f:
         while bytes_written < size_bytes:
+            # Last chunk may be smaller than chunk_size
             to_write = min(chunk_size, size_bytes - bytes_written)
 
+            # Random content avoids any compression/caching advantage
             f.write(os.urandom(to_write))
 
             bytes_written += to_write
-    
+
 
 def main(output_dir="server/static", manifest_path="server/static/manifest.csv"):
+    """
+    Generate every sample file of ``RESOURCE_TIERS`` and write the manifest.
+
+    Args:
+        output_dir (str): folder for the sample files.
+        manifest_path (str): path of the manifest CSV.
+    """
     os.makedirs(output_dir, exist_ok=True)
     rows = []
     for tier, files in RESOURCE_TIERS.items():
@@ -57,11 +96,12 @@ def main(output_dir="server/static", manifest_path="server/static/manifest.csv")
             generate_sample(path, size_to_bytes(value, unit))
             rows.append({'filename': filename, 'tier': tier, 'size_bytes': size_bytes})
 
+    # Manifest read by load_gen/generator.py
     with open(manifest_path, 'w', newline="") as f:
         writer = csv.DictWriter(f, fieldnames=['filename', 'tier', 'size_bytes'])
         writer.writeheader()
         writer.writerows(rows)
 
+
 if __name__ == "__main__":
     main()
-

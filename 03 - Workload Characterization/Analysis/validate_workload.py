@@ -3,6 +3,12 @@
  * created on 04-10-2026-15h-36m
  * github: https://github.com/antsiri
  * copyright 2026
+
+Validation of the synthetic workload against the real one.
+
+For each KPI it compares the means (relative error) and the distributions
+(two-sample Kolmogorov-Smirnov test) of the two vmstat reports and saves
+``workload_validation_comparison.png`` with the CDFs of the context switches.
 """
 
 import pandas as pd
@@ -12,7 +18,17 @@ import matplotlib.pyplot as plt
 
 from pathlib import Path
 
+
 def parse_log(file_path):
+    """
+    Parse a vmstat-format log into a numeric DataFrame.
+
+    Args:
+        file_path (str | Path): path of the log.
+
+    Returns:
+        pandas.DataFrame: one row per sample, rows with NaN removed.
+    """
     path = Path(file_path)
 
     columns = ['r', 'b', 'swpd', 'free', 'buff', 'cache', 'si', 'so',
@@ -23,6 +39,7 @@ def parse_log(file_path):
     with open(path, 'r') as f:
         for line in f:
             sline = line.strip()
+            # Skip empty lines and headers
             if not sline or 'procs' in sline or 'swpd' in sline or 'r b' in sline:
                 continue
             chunks = sline.split()
@@ -30,10 +47,22 @@ def parse_log(file_path):
                 cleaned.append(chunks[:17])
 
     df = pd.DataFrame(cleaned, columns=columns)
+    # Replace decimal commas with dots, then convert to numbers
     df = df.map(lambda x: str(x).replace(',', '.') if isinstance(x, str) else x)
     return df.apply(pd.to_numeric, errors='coerce').dropna()
 
+
 def compare_workloads(real_path='report_LL_real.txt', synth_path='report_LL_synthetic.txt'):
+    """
+    Compare real and synthetic low-level reports.
+
+    Args:
+        real_path (str): vmstat report of the real workload.
+        synth_path (str): vmstat report of the synthetic workload.
+
+    Returns:
+        pandas.DataFrame: per-metric means, relative error (%), KS statistic and p-value.
+    """
     df_real = parse_log(real_path)
     df_synth = parse_log(synth_path)
 
@@ -41,10 +70,12 @@ def compare_workloads(real_path='report_LL_real.txt', synth_path='report_LL_synt
     comparison_data = []
 
     for m in metrics:
+        # Relative error of the synthetic mean with respect to the real one
         mean_r = df_real[m].mean()
         mean_s = df_synth[m].mean()
         rel_err = abs(mean_r - mean_s) / mean_r * 100 if mean_r != 0 else 0
 
+        # Two-sample KS test: H0 = both samples come from the same distribution
         ks_stat, p_value = stats.ks_2samp(df_real[m], df_synth[m])
 
         comparison_data.append({
@@ -53,16 +84,17 @@ def compare_workloads(real_path='report_LL_real.txt', synth_path='report_LL_synt
             'Synth Mean': round(mean_s, 2),
             'Relative Error (%)': round(rel_err, 2),
             'KS Stat (D)': round(ks_stat, 4),
-            'p-value': f'{p_value:.4f}' 
+            'p-value': f'{p_value:.4f}'
         })
 
     comp_df = pd.DataFrame(comparison_data)
 
     fig, ax = plt.subplots(figsize=(9, 5))
 
+    # Empirical CDF of the real context switches
     r_sorted = np.sort(df_real['cs'])
     r_ecdf = np.arange(1, len(r_sorted) + 1) / len(r_sorted)
-    ax.plot(r_sorted, 
+    ax.plot(r_sorted,
             r_ecdf,
             label='Real Workload',
             color='blue',
@@ -70,16 +102,17 @@ def compare_workloads(real_path='report_LL_real.txt', synth_path='report_LL_synt
             linewidth=2,
             )
 
+    # Empirical CDF of the synthetic context switches
     s_sorted = np.sort(df_synth['cs'])
     s_ecdf = np.arange(1, len(s_sorted) + 1) / len(s_sorted)
-    ax.plot(s_sorted, 
+    ax.plot(s_sorted,
             s_ecdf,
             label='Synthetic Workload',
             color='orange',
             linestyle='--',
             linewidth=2,
             )
-    
+
     ax.set_title('Workload Validation - Context Switches CDF Comparison')
     ax.set_xlabel('Context Switches / sec (cs)')
     ax.set_ylabel('Cumulative Probability F(x)')
@@ -91,6 +124,7 @@ def compare_workloads(real_path='report_LL_real.txt', synth_path='report_LL_synt
     plt.close()
 
     return comp_df
+
 
 if __name__ == '__main__':
     report_df = compare_workloads(real_path='/Users/antoniosirignano/Desktop/Progetto Impianti di Elaborazione/03 - Workload Characterization/report_LL_real.txt',
